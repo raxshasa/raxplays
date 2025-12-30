@@ -13,8 +13,11 @@ import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: SITE.website,
+  site: 'https://raxshasa.github.io',
   base: "/raxplays",
+  build: {
+    format: 'directory'
+  },
   trailingSlash: 'always',
   integrations: [
     sitemap({
