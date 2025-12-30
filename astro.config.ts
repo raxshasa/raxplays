@@ -18,7 +18,7 @@ export default defineConfig({
   build: {
     format: 'directory'
   },
-  trailingSlash: 'always',
+  //trailingSlash: 'always',
   integrations: [
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
