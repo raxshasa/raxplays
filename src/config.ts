@@ -3,6 +3,7 @@ export const SITE = {
   author: "raxshasa",
   desc: "Absolute nonsense.",
   title: "raxplays",
+  profile: "https://raxshasa.github.io/",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
