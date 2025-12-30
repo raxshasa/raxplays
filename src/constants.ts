@@ -17,7 +17,8 @@ interface Social {
 }
 
 export const SOCIALS: Social[] = [
-  {
+  
+  /*{
     name: "GitHub",
     href: "https://github.com/satnaing/astro-paper",
     linkTitle: `${SITE.title} on GitHub`,
@@ -41,6 +42,7 @@ export const SOCIALS: Social[] = [
     linkTitle: `Send an email to ${SITE.title}`,
     icon: IconMail,
   },
+  */
 ] as const;
 
 export const SHARE_LINKS: Social[] = [
