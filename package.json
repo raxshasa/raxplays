@@ -1,6 +1,7 @@
 {
   "name": "raxplays",
   "type": "module",
+  "packageManager": "pnpm@10.27.0",
   "version": "5.5.0",
   "scripts": {
     "dev": "astro dev",
