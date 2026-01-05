@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import { SITE } from "@config";
+import slugify from "@utils/slugify";
+
+const posts = await getCollection("blog");
+
+// Get all unique games from all posts
+const games = [...new Set(posts.flatMap(post => post.data.games || []))];
+---
+
+<Layout title={`Games | ${SITE.title}`}>
+  <Header activeNav="games" />
+  <Main pageTitle="Games" pageDesc="All the games I've written about.">
+    <ul>
+      {games.map(game => (
+        <li class="inline-block my-1 underline-offset-4">
+          <a
+            href={`/raxplays/games/${slugify(game)}/`}
+            class="text-lg pr-2 group"
+          >
+            {game}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </Main>
+  <Footer />
+</Layout>

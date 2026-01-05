@@ -1,0 +1,68 @@
+---
+import { getCollection } from "astro:content";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Card from "@components/Card.astro";
+import getSortedPosts from "@utils/getSortedPosts";
+import { slugifyStr } from "@utils/slugify";
+import { SITE } from "@config";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  
+  // Get unique games and filter out any undefined ones
+  const games = [...new Set(posts.flatMap(post => post.data.games || []))];
+
+  return games.map(game => ({
+    params: { game: slugifyStr(game) },
+    props: { gameName: game },
+  }));
+}
+
+const { gameName } = Astro.props;
+const posts = await getCollection("blog");
+
+const gamePosts = getSortedPosts(
+  posts.filter(post => {
+    // Check if post and post.data actually exist first
+    if (!post || !post.data) return false;
+
+    // Ensure it's not a draft
+    if (post.data.draft) return false;
+
+    // Ensure it has a games array and the game matches
+    const postGames = post.data.games;
+    const isMatch = Array.isArray(postGames) && 
+                    postGames.some(g => slugifyStr(g) === game);
+
+    return isMatch;
+  })
+);
+---
+
+<Layout title={`Game: ${gameName} | ${SITE.title}`}>
+  <Header activeNav="games" />
+  <Main
+    pageTitle={`Game: ${gameName}`}
+    pageDesc={`All posts related to ${gameName}.`}
+  >
+    <ul>
+  {
+    gamePosts.map(post => {
+      // If for some reason post.data is missing here, skip this card
+      if (!post?.data) return null;
+
+      return (
+        <Card 
+          href={`/raxplays/posts/${post.id || post.slug}/`} 
+          frontmatter={post.data} 
+        />
+      );
+    })
+  }
+</ul>
+  </Main>
+  <Footer />
+</Layout>

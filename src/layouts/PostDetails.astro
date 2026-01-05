@@ -31,6 +31,7 @@ const {
   pubDatetime,
   modDatetime,
   timezone,
+  games,
   tags,
   hideEditPost,
 } = post.data;
@@ -99,6 +100,7 @@ const nextPost =
     >
       {title}
     </h1>
+    <div>DEBUG: {JSON.stringify(games)}</div>
     <div class="my-2 flex items-center gap-2">
       <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
       <span
@@ -120,6 +122,16 @@ const nextPost =
     <hr class="my-8 border-dashed" />
 
     <EditPost class="sm:hidden" {hideEditPost} {post} />
+
+    {games && games.length > 0 && (
+      <ul>
+        {games.map(game => (
+          <li class="inline-block my-1 underline-offset-4">
+            <a href={`/raxplays/games/${slugifyStr(game)}/`}>{game}</a>
+          </li>
+        ))}
+      </ul>
+    )}
 
     <ul class="mt-4 mb-8 sm:my-8">
       {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} />)}
