@@ -21,23 +21,21 @@ export async function getStaticPaths() {
   }));
 }
 
+const { game } = Astro.params;
 const { gameName } = Astro.props;
 const posts = await getCollection("blog");
 
 const gamePosts = getSortedPosts(
   posts.filter(post => {
-    // Check if post and post.data actually exist first
-    if (!post || !post.data) return false;
+    // 1. Must have the core data object
+    if (!post?.data) return false;
 
-    // Ensure it's not a draft
-    if (post.data.draft) return false;
+    // 2. Must have a title (prevents the 'data' destructuring error)
+    if (!post.data.title) return false;
 
-    // Ensure it has a games array and the game matches
-    const postGames = post.data.games;
-    const isMatch = Array.isArray(postGames) && 
-                    postGames.some(g => slugifyStr(g) === game);
-
-    return isMatch;
+    // 3. Must have a valid game match
+    // Check that 'post.data.games' exists and 'game' (from Astro.params) matches
+    return post.data.games?.some(g => slugifyStr(g) === game);
   })
 );
 ---
@@ -49,20 +47,10 @@ const gamePosts = getSortedPosts(
     pageDesc={`All posts related to ${gameName}.`}
   >
     <ul>
-  {
-    gamePosts.map(post => {
-      // If for some reason post.data is missing here, skip this card
-      if (!post?.data) return null;
-
-      return (
-        <Card 
-          href={`/raxplays/posts/${post.id || post.slug}/`} 
-          frontmatter={post.data} 
-        />
-      );
-    })
-  }
-</ul>
+      {gamePosts.map(post => (
+        <Card {...post} variant="h2" />
+      ))}
+    </ul>
   </Main>
   <Footer />
 </Layout>

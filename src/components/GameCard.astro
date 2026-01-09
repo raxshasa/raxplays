@@ -1,0 +1,37 @@
+---
+// src/components/GameCard.astro
+export interface Props {
+  name: string;
+  slug: string;
+  image?: string;
+}
+
+const { name, slug, image } = Astro.props;
+---
+
+<li class="group relative aspect-[2/3] overflow-hidden rounded-xl bg-neutral-800 shadow-lg transition-all duration-300 hover:-translate-y-2">
+  <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-neutral-500">
+    <svg xmlns="http://www.w3.org/2000/svg" class="mb-2 h-12 w-12 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+    </svg>
+    <span class="text-xs font-semibold uppercase tracking-wider">{name}</span>
+  </div>
+
+  <a href={`/raxplays/games/${slug}/`} class="block h-full w-full">
+    <img 
+      src={`/raxplays${image}`} 
+      alt="" 
+      class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+      loading="lazy"
+      onerror="this.style.opacity='0'; this.nextElementSibling.style.display='block';"
+    />
+    
+    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+    
+    <div class="absolute inset-0 flex items-end p-4">
+      <h2 class="text-xl font-bold text-white transition-colors group-hover:text-accent leading-tight">
+        {name}
+      </h2>
+    </div>
+  </a>
+</li>
