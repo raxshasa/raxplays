@@ -5,7 +5,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@config": ["./src/config.ts"],
+      "@types": ["./src/types.ts"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

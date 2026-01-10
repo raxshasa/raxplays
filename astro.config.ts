@@ -13,10 +13,10 @@ import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://raxshasa.github.io',
+  site: "https://raxshasa.github.io",
   base: "/raxplays",
   build: {
-    format: 'directory'
+    format: "directory",
   },
   //trailingSlash: 'always',
   integrations: [

@@ -14,6 +14,7 @@ import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
+import GameCard from "@components/GameCard.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -31,6 +32,7 @@ const {
   pubDatetime,
   modDatetime,
   timezone,
+  games,
   tags,
   hideEditPost,
 } = post.data;
@@ -99,6 +101,7 @@ const nextPost =
     >
       {title}
     </h1>
+
     <div class="my-2 flex items-center gap-2">
       <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
       <span
@@ -108,7 +111,21 @@ const nextPost =
           { hidden: !SITE.editPost.enabled || hideEditPost },
         ]}>|</span
       >
-      <EditPost {hideEditPost} {post} class="max-sm:hidden" />
+    </div>
+    <div class="not-prose mt-4 w-full">
+      {
+        games && games.length > 0 && (
+          <ul class="m-0 grid list-none grid-cols-2 gap-4 p-0 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+            {games.map(game => (
+              <GameCard
+                name={game}
+                slug={slugifyStr(game)}
+                image={`/assets/games/${slugifyStr(game)}.jpg`}
+              />
+            ))}
+          </ul>
+        )
+      }
     </div>
     <article
       id="article"
