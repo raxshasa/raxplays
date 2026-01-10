@@ -3,6 +3,7 @@ import { slugifyStr } from "@/utils/slugify";
 import type { CollectionEntry } from "astro:content";
 import { getPath } from "@/utils/getPath";
 import Datetime from "./Datetime.astro";
+import GameCard from "@components/GameCard.astro";
 
 export interface Props extends CollectionEntry<"blog"> {
   variant?: "h2" | "h3";
@@ -10,7 +11,7 @@ export interface Props extends CollectionEntry<"blog"> {
 
 const { variant = "h2", data, id, filePath } = Astro.props;
 
-const { title, description, pubDatetime, modDatetime, timezone } = data || {};
+const { title, description, pubDatetime, modDatetime, timezone, games } = data || {};
 
 const headerProps = {
   style: { viewTransitionName: slugifyStr(title) },
@@ -33,4 +34,17 @@ const headerProps = {
   </a>
   <Datetime {pubDatetime} {modDatetime} {timezone} />
   <p>{description}</p>
+  <div class="not-prose mt-4 w-full">
+      {games && games.length > 0 && (
+        <ul class="!m-0 grid grid-cols-8 gap-4 sm:grid-cols-3 md:grid-cols-8 !p-0 list-none">
+          {games.map(game => (
+            <GameCard 
+              name={game} 
+              slug={slugifyStr(game)} 
+              image={`/assets/games/${slugifyStr(game)}.jpg`} 
+            />
+          ))}
+        </ul>
+      )}
+    </div>
 </li>

@@ -14,6 +14,7 @@ import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
+import GameCard from "@components/GameCard.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -110,28 +111,31 @@ const nextPost =
           { hidden: !SITE.editPost.enabled || hideEditPost },
         ]}>|</span
       >
-      <EditPost {hideEditPost} {post} class="max-sm:hidden" />
+    </div>
+    <div class="not-prose mt-4 w-full"> 
+      {games && games.length > 0 && (
+        <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 m-0 p-0 list-none">
+          {games.map(game => (
+            <GameCard 
+              name={game} 
+              slug={slugifyStr(game)} 
+              image={`/assets/games/${slugifyStr(game)}.jpg`} 
+            />
+          ))}
+        </ul>
+      )}
     </div>
     <article
       id="article"
       class="app-prose mx-auto mt-8 max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
     >
+    
       <Content />
     </article>
 
     <hr class="my-8 border-dashed" />
 
     <EditPost class="sm:hidden" {hideEditPost} {post} />
-
-    {games && games.length > 0 && (
-      <ul>
-        {games.map(game => (
-          <li class="inline-block my-1 underline-offset-4">
-            <a href={`/raxplays/games/${slugifyStr(game)}/`}>{game}</a>
-          </li>
-        ))}
-      </ul>
-    )}
 
     <ul class="mt-4 mb-8 sm:my-8">
       {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} />)}

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/container-queries";
 @import "./typography.css";
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
@@ -7,7 +8,7 @@
 html[data-theme="light"] {
   --background: #fdfdfd;
   --foreground: #282728;
-  --accent: #006cac;
+  --accent: #9f9f9f;
   --muted: #e6e6e6;
   --border: #ece9e9;
 }
