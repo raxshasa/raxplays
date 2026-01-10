@@ -11,7 +11,7 @@ import { SITE } from "@config";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
-  
+
   // Get unique games and filter out any undefined ones
   const games = [...new Set(posts.flatMap(post => post.data.games || []))];
 
@@ -47,9 +47,7 @@ const gamePosts = getSortedPosts(
     pageDesc={`All posts related to ${gameName}.`}
   >
     <ul>
-      {gamePosts.map(post => (
-        <Card {...post} variant="h2" />
-      ))}
+      {gamePosts.map(post => <Card {...post} variant="h2" />)}
     </ul>
   </Main>
   <Footer />

@@ -11,7 +11,8 @@ export interface Props extends CollectionEntry<"blog"> {
 
 const { variant = "h2", data, id, filePath } = Astro.props;
 
-const { title, description, pubDatetime, modDatetime, timezone, games } = data || {};
+const { title, description, pubDatetime, modDatetime, timezone, games } =
+  data || {};
 
 const headerProps = {
   style: { viewTransitionName: slugifyStr(title) },
@@ -35,16 +36,18 @@ const headerProps = {
   <Datetime {pubDatetime} {modDatetime} {timezone} />
   <p>{description}</p>
   <div class="not-prose mt-4 w-full">
-      {games && games.length > 0 && (
-        <ul class="!m-0 grid grid-cols-8 gap-4 sm:grid-cols-3 md:grid-cols-8 !p-0 list-none">
+    {
+      games && games.length > 0 && (
+        <ul class="!m-0 grid list-none grid-cols-8 gap-4 !p-0 sm:grid-cols-3 md:grid-cols-8">
           {games.map(game => (
-            <GameCard 
-              name={game} 
-              slug={slugifyStr(game)} 
-              image={`/assets/games/${slugifyStr(game)}.jpg`} 
+            <GameCard
+              name={game}
+              slug={slugifyStr(game)}
+              image={`/assets/games/${slugifyStr(game)}.jpg`}
             />
           ))}
         </ul>
-      )}
-    </div>
+      )
+    }
+  </div>
 </li>

@@ -19,14 +19,18 @@ const alphabetizedGames = games.sort((a, b) => a.localeCompare(b));
 <Layout title={`Games | ${SITE.title}`}>
   <Header activeNav="games" />
   <Main pageTitle="Games" pageDesc="All the games I've written about.">
-    <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 mt-8">
-      {alphabetizedGames.map(game => (
-        <GameCard 
-          name={game} 
-          slug={slugifyStr(game)} 
-          image={`/assets/games/${slugifyStr(game)}.jpg`} 
-        />
-      ))}
+    <ul
+      class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4"
+    >
+      {
+        alphabetizedGames.map(game => (
+          <GameCard
+            name={game}
+            slug={slugifyStr(game)}
+            image={`/assets/games/${slugifyStr(game)}.jpg`}
+          />
+        ))
+      }
     </ul>
   </Main>
   <Footer />
