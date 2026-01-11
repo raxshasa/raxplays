@@ -5,7 +5,7 @@ modDatetime: 2026-01-08T22:36:45.934Z
 title: Feeling very whelmed while playing Cities Skylines 2 
 slug: feeling-very-whelmed-while-playing-cities-skylines-2
 featured: false
-draft: true
+draft: false
 games:
   - "Cities Skylines 2"
 tags:
