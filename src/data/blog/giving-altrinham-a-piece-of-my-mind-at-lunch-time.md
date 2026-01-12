@@ -4,7 +4,7 @@ pubDatetime: 2026-01-12T13:28:08.775Z
 title: "Giving Altrincham a piece of my mind at lunch time"
 postSlug: "giving-altrincham-a-piece-of-my-mind-at-lunch-time"
 featured: false
-draft: true
+draft: false
 tags:
   - daily
   - micro
