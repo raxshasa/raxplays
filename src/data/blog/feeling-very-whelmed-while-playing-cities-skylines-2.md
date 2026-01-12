@@ -34,7 +34,7 @@ Generally, I'm pretty immune to slight performance issues but here it spoils the
 
 One of the favourite parts of the first Cities was traffic managemnet. Finding smart solutions to bad intersections is big fun. Some of that exists in Cities 2 but it's inconsistent. Sometimes issues disppear and reappear, almost inexplicably. I think this is the rush hour simulation, but it's hard to tell as I turned off the day / night cycle because everything looked shit at night time.
 
-There's no overlap that shows you where people are trying to go. I try to work it out myself and build in such a way to distribute trips, but it's hard to feel like I'm not shooting in the dark.
+There's no overlay that shows you where people are trying to go. I try to work it out myself and build in such a way to distribute trips, but it's hard to feel like I'm not shooting in the dark.
 
 ### Lifelessness
 
