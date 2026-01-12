@@ -11,6 +11,7 @@ tags:
   - lunchtime
   - management
   - simulation
+  - PC
 games:
   - "Football Manager 26"
 description: "A couple of matches at lunch don't help to shake lingering doubts"
@@ -19,7 +20,7 @@ description: "A couple of matches at lunch don't help to shake lingering doubts"
 Ah, Football Manager 26. A game I waited for with baited breath. A game that I was desperate to get stuck in to, especially after the delay. I was relying on you to carry me through the last few months of 2025. How not quite there you are.
 
 ## Short session
-As a super short lunch session, I never expect much. Football Manager is a good one as you can judge pretty easily when to cut it off. If there's only a few minutes before you need to get back to it, don't start a match! Simple. 
+As a super short lunch session, I never expect much. Football Manager is a good one as you can judge pretty easily when to cut it off. If there's only a few minutes before you need to get back to it, don't start a match! Simple. As it happens, I'm welcoming the mighty Altrincham to Woking to try to continue my unbeaten streak and stay top.
 
 I continue to not know how to feel about the latest installment. I thought 24 was _great_ and played it a lot. I was ready for 26, having had quite a break from the old game. 
 
