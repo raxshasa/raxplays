@@ -8,7 +8,7 @@
 html[data-theme="light"] {
   --background: #fdfdfd;
   --foreground: #282728;
-  --accent: #9f9f9f;
+  --accent: #2c2c2c;
   --muted: #e6e6e6;
   --border: #ece9e9;
 }
@@ -19,6 +19,12 @@ html[data-theme="dark"] {
   --accent: #ff6b01;
   --muted: #343f60;
   --border: #ab4b08;
+}
+
+body {
+  font-family: 'Cabin Variable', sans-serif;
+  font-variation-settings: 'wght' 400;
+  font-weight: 400;
 }
 
 @theme inline {

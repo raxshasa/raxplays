@@ -12,6 +12,8 @@ tags:
   - daily
   - solo
   - PC
+  - city builder
+  - simulation
 description:
   I played Cities Skylines while watching something on the side. Still have mixed feeling about this title.
 ---
