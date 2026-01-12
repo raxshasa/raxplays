@@ -16,7 +16,7 @@ description:
   I played Cities Skylines while watching something on the side. Still have mixed feeling about this title.
 ---
 
-## Bimpbling along
+## Bimbling along
 
 It's been a while since I touched Cities and I decided it was time to try to love this game again. I want to, I very badly want to, but it has so far failed to grab me in the same way as the first title.
 
@@ -42,4 +42,4 @@ There's a feeling of lifelessness to the city for me. I find it hard to create c
 
 ## Next up
 
-I want to carry on with my city. I'm invested _enough_ for that. Cities Skylines 2 remains a 6/10 for me and pre-purchasing the Ultimate Edition continues to be a bad purchase. 
+I want to carry on with my city. I'm invested _enough_ for that. Cities Skylines 2 remains a 6/10 for me and pre-purchasing the Ultimate Edition continues to be a bad decision. 
