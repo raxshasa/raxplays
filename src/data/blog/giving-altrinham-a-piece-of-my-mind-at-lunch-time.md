@@ -1,8 +1,8 @@
 ---
 author: Olly Percival
 pubDatetime: 2026-01-12T13:28:08.775Z
-title: "Giving Altrincham a piece of my mind at lunch time"
-postSlug: "giving-altrincham-a-piece-of-my-mind-at-lunch-time"
+title: Giving Altrincham a piece of my mind at lunch time
+postSlug: giving-altrincham-a-piece-of-my-mind-at-lunch-time
 featured: false
 draft: false
 tags:
@@ -14,7 +14,8 @@ tags:
   - PC
 games:
   - "Football Manager 26"
-description: "A couple of matches at lunch don't help to shake lingering doubts"
+description: 
+  A couple of matches at lunch don't help to shake lingering doubts
 ---
 
 Ah, Football Manager 26. A game I waited for with baited breath. A game that I was desperate to get stuck in to, especially after the delay. I was relying on you to carry me through the last few months of 2025. How not quite there you are.
