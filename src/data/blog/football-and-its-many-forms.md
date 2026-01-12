@@ -30,7 +30,7 @@ We're able to chat about whatever while stringing some half-decent results toget
 
 The fact that it's mechanically quite tight makes it easy to understand and play.
 
-## More football for desert
+## More football for dessert
 
 When we play as a group, it's not uncommon for people to drift a way a little early, especially as we're old and tired. I therefore dipped into Football Manager for a bit before signing off. I made a conscious effort to take a little more time between matches and make use of some new screens that I've otherwise ignored. I think it works. I feel less aggrieved about some of the perceived lack of depth.
 
