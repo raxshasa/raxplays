@@ -3,7 +3,6 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
-import { defineConfig } from "astro/config";
 import partytown from "@astrojs/partytown";
 import {
   transformerNotationDiff,
