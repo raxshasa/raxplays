@@ -1,11 +1,10 @@
 ---
-const measurementId = 'G-2GSGNWHRWM'
+const measurementId = "G-2GSGNWHRWM";
 ---
 
 <script
   type="text/partytown"
-  src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-></script>
+  src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>
 
 <script type="text/partytown" define:vars={{ measurementId }}>
   window.dataLayer = window.dataLayer || [];
@@ -13,6 +12,6 @@ const measurementId = 'G-2GSGNWHRWM'
     // eslint-disable-next-line prefer-rest-params
     dataLayer.push(arguments);
   }
-  gtag('js', new Date());
-  gtag('config', measurementId);
+  gtag("js", new Date());
+  gtag("config", measurementId);
 </script>
