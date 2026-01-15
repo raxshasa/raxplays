@@ -2,7 +2,7 @@
 author: Olly Percival
 pubDatetime: 2026-01-08T22:36:45.934Z
 modDatetime: 2026-01-08T22:36:45.934Z
-title: Feeling very whelmed while playing Cities Skylines 2 
+title: Feeling very whelmed while playing Cities Skylines 2
 slug: feeling-very-whelmed-while-playing-cities-skylines-2
 featured: false
 draft: false
@@ -14,8 +14,7 @@ tags:
   - PC
   - city builder
   - simulation
-description:
-  I played Cities Skylines while watching something on the side. Still have mixed feeling about this title.
+description: I played Cities Skylines while watching something on the side. Still have mixed feeling about this title.
 ---
 
 ## Bimbling along
@@ -24,7 +23,7 @@ It's been a while since I touched Cities and I decided it was time to try to lov
 
 I'm a few sessions into my current city. I'm at the stage where I should be thinking up all sorts of ideas around how and where to expand. How to improve my office districts, how best to fill them with educated folks. Where to create an old town, how to run trans and trains around it. And... I'm getting some of that. The transit options feel like they're there but I'm otherwise struggling a bit. I just don't think I care.
 
-I'm struggling to nail down why this is. I have a couple of thoughts. 
+I'm struggling to nail down why this is. I have a couple of thoughts.
 
 ### Performance
 
@@ -44,4 +43,4 @@ There's a feeling of lifelessness to the city for me. I find it hard to create c
 
 ## Next up
 
-I want to carry on with my city. I'm invested _enough_ for that. Cities Skylines 2 remains a 6/10 for me and pre-purchasing the Ultimate Edition continues to be a bad decision. 
+I want to carry on with my city. I'm invested _enough_ for that. Cities Skylines 2 remains a 6/10 for me and pre-purchasing the Ultimate Edition continues to be a bad decision.
