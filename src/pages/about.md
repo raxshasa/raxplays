@@ -13,7 +13,7 @@ This is the main one, a good chuck of my time is gaming on PC. I have a modest r
 #### Specs
 - CPU: Ryzen 3600 X
 - GPU: NVIDIA 2070 SUPER
-- RAM 64GB
+- RAM: 64GB
 
 [Check out my PC posts](/tags/pc)
 <hr>
