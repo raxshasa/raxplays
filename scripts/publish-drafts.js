@@ -1,8 +1,10 @@
+/* eslint-disable no-console */
+
 import fs from 'fs';
 import path from 'path';
 
 const blogDir = './src/data/blog';
-const now = new Date().toISOString();
+// const now = new Date().toISOString();
 
 const files = fs.readdirSync(blogDir);
 
