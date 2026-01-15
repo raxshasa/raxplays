@@ -4,6 +4,7 @@ import { PUBLIC_GOOGLE_SITE_VERIFICATION } from "astro:env/client";
 import { SITE } from "@/config";
 import "@/styles/global.css";
 import "@fontsource-variable/cabin";
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 
 export interface Props {
   title?: string;
@@ -73,6 +74,8 @@ const structuredData = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />
+
+    <GoogleAnalytics />
 
     <!-- Article Published/Modified time -->
     {

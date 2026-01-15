@@ -3,6 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
+import partytown from "@astrojs/partytown";
 import {
   transformerNotationDiff,
   transformerNotationHighlight,
@@ -22,6 +23,12 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
+    }),
+    partytown({
+      // This allows the GA scripts to talk to the dataLayer from the background
+      config: {
+        forward: ["dataLayer.push"],
+      },
     }),
   ],
   markdown: {
