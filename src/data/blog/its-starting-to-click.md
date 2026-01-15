@@ -4,7 +4,7 @@ pubDatetime: 2026-01-14T14:11:43.438Z
 title: "It's starting to click"
 postSlug: its-starting-to-click
 featured: false
-draft: true
+draft: false
 tags:
   - daily
   - micro
