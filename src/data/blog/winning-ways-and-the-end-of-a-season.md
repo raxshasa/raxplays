@@ -4,7 +4,7 @@ pubDatetime: 2026-01-15T20:06:06.854Z
 title: "Winning ways and the end of a season"
 postSlug: winning-ways-and-the-end-of-a-season
 featured: false
-draft: true
+draft: false
 tags:
   - daily
   - management
