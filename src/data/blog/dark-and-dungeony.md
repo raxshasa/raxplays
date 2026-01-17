@@ -14,17 +14,26 @@ games:
 description: "Following up on one of the most uniquely atmospheric games out there is always going to be a big ask."
 ---
 
-I'm only 5 hours in To Darkest Dungeon 2, a follow up to a game I loved, dreaded playing nd never finished.
+I'm only 5 hours in to Darkest Dungeon 2, a follow up to a game I loved, dreaded playing and never finished.
 
 ## Brittle and punishing
 
-The original Darkest Dungeon from developer Red Hook occupies a special place in my heart. I loved it: the way it built world and charactes was outstanding. Dropping in atmosphere and threat, it was a delight. It was also incredibly tough and unrelentingly punishing. I don't think there's a more brittle game out there. You could spend dozens of hours training and honing your party ready for a big test, only to have them wiped out or incapacitated in the space of 20 minutes.
+The original Darkest Dungeon from developer Red Hook occupies a special place in my heart. I loved it: the way it built world and charactes was outstanding. Dripping in atmosphere and threat, it was a delight. It was also incredibly tough and unrelentingly punishing. I don't think there's a more brittle game out there. You could spend dozens of hours training and honing your party ready for a big test, only to have them wiped out or incapacitated in the space of 20 minutes.
 
-I loveed that element of danger, but it could made it incredibly hard to drum up the motivation to play.
+I loved that element of danger, but it could made it incredibly hard to drum up the motivation to play.
 
 I waited a good long while to purchase the second title.
 
 ## Familiar vibes but a wholly different game
 Credit to Red Hook, they could have turned out an updated, refreshed, "could have been a DLC" sequel and probably done OK. They have not done that. Darkest Dungeon 2 is a completely different title.
 
-The core of its combat is the same, but the overall game is an entirely different genre. Here we eschew the persistent, longer term characters and instead move to a roguelike structure with  
+The core of its combat is the same, but the overall game is an entirely different genre. Here we eschew the persistent, longer term characters and instead move to a roguelike structure with entirely new mechanics around profressing characters. 
+
+I'm still forming opinions on this. Initially, I was a little overwhelmed and concerned that it wasn't for me. I'm not there now, I'm broadly positive about the game, but there are aspects I need to see more of before making that call 
+
+## Easy of the eye
+One thing that is clear, however, is how good this thing looks. 
+
+The first game looked good and did an amazing job of conveying vibe. This follow up delivers on that and then some. The visuals are dialled up a bit and nicely saturated but it's in the animation where i feel this thing really shines. 
+
+It's impossible to convey in stills, but there's something delightfully engrossing about the quality of the animation on offer. Both idles and combat anims look slick and well polished, delivering on the heft and grim notes promised by the overall art style. Its absolutely lovely.
