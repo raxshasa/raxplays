@@ -1,0 +1,30 @@
+---
+author: Olly Percival
+pubDatetime: 2026-01-17T14:11:43.438Z
+title: "Atmosphere and caravans"
+postSlug: dark-and-duneony
+featured: false
+draft: true
+tags:
+  - daily
+  - roguelike
+  - turn based
+games:
+  - "Darkest Dungeon 2"
+description: "Following up on one of the most uniquely atmospheric games out there is always going to be a big ask."
+---
+
+I'm only 5 hours in To Darkest Dungeon 2, a follow up to a game I loved, dreaded playing nd never finished.
+
+## Brittle and punishing
+
+The original Darkest Dungeon from developer Red Hook occupies a special place in my heart. I loved it: the way it built world and charactes was outstanding. Dropping in atmosphere and threat, it was a delight. It was also incredibly tough and unrelentingly punishing. I don't think there's a more brittle game out there. You could spend dozens of hours training and honing your party ready for a big test, only to have them wiped out or incapacitated in the space of 20 minutes.
+
+I loveed that element of danger, but it could made it incredibly hard to drum up the motivation to play.
+
+I waited a good long while to purchase the second title.
+
+## Familiar vibes but a wholly different game
+Credit to Red Hook, they could have turned out an updated, refreshed, "could have been a DLC" sequel and probably done OK. They have not done that. Darkest Dungeon 2 is a completely different title.
+
+The core of its combat is the same, but the overall game is an entirely different genre. Here we eschew the persistent, longer term characters and instead move to a roguelike structure with  
