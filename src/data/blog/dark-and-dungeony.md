@@ -35,7 +35,7 @@ The core of its combat is the same, but the overall game is an entirely differen
 
 I'm still forming opinions on this. Initially, I was a little overwhelmed and concerned that it wasn't for me. I'm not there now, I'm broadly positive about the game, but there are aspects I need to see more of before making that call.
 
-## Easy of the eye
+## Easy on the eye
 One thing that is clear, however, is how good this thing looks. 
 
 ![The caravan is new and represents the link between battles. It's the biggest area I have questions about](src/assets/images/darkest-dungeon-2/caravan.jpeg)
