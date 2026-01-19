@@ -49,4 +49,4 @@ _Combat looks heavy and impactful and I love it_
 It's impossible to convey in stills, but there's something delightfully engrossing about the quality of the animation on offer. Both idles and combat anims look slick and well polished, delivering on the heft and grim notes promised by the overall art style. Its absolutely lovely.
 
 ## Next up
-Ultimately, I'm looking forward to playing more of this title and it's my [main game on Deck](tags/steamdeck) at the moment. More thoughts as they happen.
+Ultimately, I'm looking forward to playing more of this title and it's my [main game on Deck](/tags/steamdeck) at the moment. More thoughts as they happen.
