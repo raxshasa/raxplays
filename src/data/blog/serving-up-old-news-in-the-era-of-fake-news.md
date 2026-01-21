@@ -4,7 +4,7 @@ pubDatetime: 2026-01-19T08:46:32.992Z
 title: "Serving up old news in the era of fake news"
 postSlug: serving-up-old-news-in-the-era-of-fake-news
 featured: false
-draft: true
+draft: false
 tags:
   - daily
   - PC
