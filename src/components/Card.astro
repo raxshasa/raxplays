@@ -1,23 +1,63 @@
 ---
-import { slugifyStr } from "@/utils/slugify";
+import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
+import { slugifyStr } from "@/utils/slugify";
 import { getPath } from "@/utils/getPath";
 import Datetime from "./Datetime.astro";
 import GameCard from "@components/GameCard.astro";
 
-export interface Props extends CollectionEntry<"blog"> {
+export interface Props {
+  // Use the built-in Astro type for blog data
+  data: CollectionEntry<"blog">["data"];
+  id: string;
+  filePath?: string;
   variant?: "h2" | "h3";
 }
 
 const { variant = "h2", data, id, filePath } = Astro.props;
 
-const { title, description, pubDatetime, modDatetime, timezone, games } =
-  data || {};
+// Destructure from the 'data' prop we just received
+const {
+  title,
+  description,
+  pubDatetime,
+  modDatetime,
+  timezone,
+  games,
+  currentScore,
+} = data;
 
 const headerProps = {
   style: { viewTransitionName: slugifyStr(title) },
   class: "text-lg font-medium decoration-dashed hover:underline",
 };
+
+// --- Movement Logic ---
+let movement = null;
+
+if (currentScore && games && games.length > 0) {
+  const subjectGame = games[0];
+
+  // Look through the whole blog to find other posts with this game
+  const allRelated = await getCollection(
+    "blog",
+    post =>
+      post.data.games?.includes(subjectGame) &&
+      post.data.currentScore !== undefined
+  );
+
+  if (allRelated.length > 1) {
+    const sorted = allRelated.sort(
+      (a, b) => a.data.pubDatetime.valueOf() - b.data.pubDatetime.valueOf()
+    );
+
+    const initialScore = sorted[0].data.currentScore ?? 0;
+
+    if (currentScore > initialScore) movement = "up";
+    if (currentScore < initialScore) movement = "down";
+    if (currentScore == initialScore) movement = "same";
+  }
+}
 ---
 
 <li class="my-6">
@@ -27,14 +67,35 @@ const headerProps = {
   >
     {
       variant === "h2" ? (
-        <h2 {...headerProps}>{title}</h2>
+        <h2 {...headerProps}>
+          {title}
+          {currentScore && (
+            <span class="ml-3 inline-block rounded border border-accent bg-transparent px-2 py-0.5 align-middle text-sm font-bold text-accent">
+              {currentScore.toFixed(1)}
+              {movement === "up" && <span class="ml-1 text-green-500">↑</span>}
+              {movement === "down" && <span class="ml-1 text-red-500">↓</span>}
+              {movement === "same" && <span class="ml-1">-</span>}
+            </span>
+          )}
+        </h2>
       ) : (
-        <h3 {...headerProps}>{title}</h3>
+        <h3 {...headerProps}>
+          {title}
+          {currentScore && (
+            <span class="ml-3 inline-block rounded border border-accent bg-transparent px-2 py-0.5 align-middle text-sm font-bold text-accent">
+              {currentScore.toFixed(1)}
+              {movement === "up" && <span class="ml-1 text-green-500">↑</span>}
+              {movement === "down" && <span class="ml-1 text-red-500">↓</span>}
+              {movement === "same" && <span class="ml-1">-</span>}
+            </span>
+          )}
+        </h3>
       )
     }
   </a>
   <Datetime {pubDatetime} {modDatetime} {timezone} />
   <p>{description}</p>
+
   <div class="not-prose mt-4 w-full">
     {
       games && games.length > 0 && (

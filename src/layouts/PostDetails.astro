@@ -15,6 +15,7 @@ import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
 import GameCard from "@components/GameCard.astro";
+import ScoreDelta from "@components/ScoreDelta.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -32,12 +33,12 @@ const {
   pubDatetime,
   modDatetime,
   timezone,
-  games,
   tags,
   hideEditPost,
 } = post.data;
 
 const { Content } = await render(post);
+const { games, currentScore } = post.data;
 
 let ogImageUrl: string | undefined;
 
@@ -135,6 +136,11 @@ const nextPost =
     </article>
 
     <hr class="my-8 border-dashed" />
+    {
+      games && currentScore && (
+        <ScoreDelta games={games} currentScore={currentScore} />
+      )
+    }
 
     <EditPost class="sm:hidden" {hideEditPost} {post} />
 

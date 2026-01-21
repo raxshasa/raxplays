@@ -16,6 +16,7 @@ const blog = defineCollection({
       draft: z.boolean().optional(),
       tags: z.array(z.string()).default(["others"]),
       games: z.array(z.string()).optional(),
+      currentScore: z.number().optional(),
       ogImage: image().or(z.string()).optional(),
       description: z.string(),
       canonicalURL: z.string().optional(),

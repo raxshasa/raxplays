@@ -14,6 +14,7 @@ tags:
   - PC
 games:
   - "Football Manager 26"
+currentScore: 6.0
 description: A couple of matches at lunch don't help to shake lingering doubts
 ---
 

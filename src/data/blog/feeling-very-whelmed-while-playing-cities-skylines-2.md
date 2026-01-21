@@ -8,6 +8,7 @@ featured: false
 draft: false
 games:
   - "Cities Skylines 2"
+currentScore: 5.5
 tags:
   - daily
   - solo
@@ -43,4 +44,4 @@ There's a feeling of lifelessness to the city for me. I find it hard to create c
 
 ## Next up
 
-I want to carry on with my city. I'm invested _enough_ for that. Cities Skylines 2 remains a 6/10 for me and pre-purchasing the Ultimate Edition continues to be a bad decision.
+I want to carry on with my city. I'm invested _enough_ for that. Cities Skylines 2 remains below a 6/10 for me and pre-purchasing the Ultimate Edition continues to be a bad decision.
