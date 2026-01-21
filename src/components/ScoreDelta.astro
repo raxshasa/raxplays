@@ -1,0 +1,143 @@
+---
+import { getCollection } from "astro:content";
+
+interface Props {
+  games: string[];
+  currentScore: number;
+}
+
+const { games, currentScore } = Astro.props;
+
+if (!games || games.length === 0 || currentScore === undefined) return null;
+
+const subjectGame = games[0];
+
+const allRelatedPosts = await getCollection("blog", ({ data }) => {
+  return (
+    data.games &&
+    data.games.includes(subjectGame) &&
+    data.currentScore !== undefined
+  );
+});
+
+const sortedPosts = allRelatedPosts.sort(
+  (a, b) => a.data.pubDatetime.valueOf() - b.data.pubDatetime.valueOf()
+);
+
+const initialPost = sortedPosts[0];
+const initialScore = initialPost.data.currentScore;
+if (initialScore === undefined) return null;
+
+const deltaVal = (currentScore - initialScore).toFixed(1);
+const isUp = currentScore > initialScore;
+const hasChanged = initialScore !== currentScore;
+
+// Simplified date for the template
+const displayDate = initialPost.data.pubDatetime.toLocaleDateString("en-GB", {
+  month: "short",
+  year: "2-digit",
+});
+---
+
+<div class="score-delta-container">
+  <div class="score-card">
+    <div class="main-info">
+      <span class="bold"><strong>{subjectGame}</strong></span>
+      <span class="label">Current Impression</span>
+      <div class="score-display">
+        <span class="score-value">{currentScore.toFixed(1)}</span>
+      </div>
+    </div>
+
+    {
+      hasChanged && (
+        <div class="delta-info">
+          <div class="initial-box">
+            <span class="label">Initial Score</span>
+            <span class="old-value">{initialScore.toFixed(1)}</span>
+            <span class="old-date">{displayDate}</span>
+          </div>
+
+          <div class={isUp ? "delta-badge up" : "delta-badge down"}>
+            <span class="arrow">{isUp ? "↑" : "↓"}</span>
+            <span class="delta-number">{Math.abs(Number(deltaVal))}</span>
+          </div>
+        </div>
+      )
+    }
+  </div>
+</div>
+
+<style>
+  .score-delta-container {
+    margin: 3rem 0;
+  }
+  .score-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-card);
+    border: 1px solid var(--color-card-muted);
+    padding: 1.5rem 0rem;
+    border-radius: 0.75rem;
+  }
+  .label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+  }
+  .bold {
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-bottom: 0.2rem;
+  }
+  .score-value {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-accent);
+  }
+  .delta-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-left: 1px solid var(--color-border);
+    padding-left: 2rem;
+  }
+  .initial-box {
+    text-align: right;
+  }
+  .old-value {
+    display: block;
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  .old-date {
+    font-size: 0.7rem;
+    opacity: 0.6;
+  }
+  .delta-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+  }
+  .up {
+    color: #22c55e;
+    background-color: rgba(34, 197, 94, 0.1);
+  }
+  .down {
+    color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.1);
+  }
+  .arrow {
+    font-size: 1.75rem;
+  }
+</style>
