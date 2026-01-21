@@ -1,6 +1,6 @@
 ---
 author: Olly Percival
-pubDatetime: 2026-01-19T08:46:32.992Z
+pubDatetime: 2026-01-19T23:46:32.992Z
 title: "Serving up old news in the era of fake news"
 postSlug: serving-up-old-news-in-the-era-of-fake-news
 featured: false
