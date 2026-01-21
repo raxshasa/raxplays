@@ -15,6 +15,7 @@ tags:
 games:
   - "Rocket League"
   - "Football Manager 26"
+currentScore: 7.0
 description: A blast with a few friends in the most chaotic form of 'football' ever made into a game.
 ---
 
