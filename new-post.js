@@ -18,6 +18,7 @@ tags:
   - daily
 games:
   - 
+currentScore: 
 description: "Brief summary of the post here."
 ---
 
