@@ -6,7 +6,7 @@ postSlug: dark-and-duneony
 featured: false
 draft: false
 tags:
-  - daily
+  - solo
   - roguelike
   - turn based
   - steamdeck

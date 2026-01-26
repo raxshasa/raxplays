@@ -6,7 +6,7 @@ postSlug: winning-ways-and-the-end-of-a-season
 featured: false
 draft: false
 tags:
-  - daily
+  - solo
   - management
   - simulation
   - PC

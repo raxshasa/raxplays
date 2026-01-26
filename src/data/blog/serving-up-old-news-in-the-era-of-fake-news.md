@@ -6,7 +6,7 @@ postSlug: serving-up-old-news-in-the-era-of-fake-news
 featured: false
 draft: false
 tags:
-  - daily
+  - solo
   - PC
   - simulation
   - strategy

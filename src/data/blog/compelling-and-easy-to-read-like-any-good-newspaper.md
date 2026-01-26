@@ -6,7 +6,7 @@ postSlug: compelling-and-easy-to-read-like-any-good-newspaper
 featured: false
 draft: false
 tags:
-  - daily
+  - solo
   - PC
   - simulation
   - strategy

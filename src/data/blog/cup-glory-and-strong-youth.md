@@ -6,7 +6,7 @@ postSlug: cup-glory-and-strong-youth
 featured: false
 draft: false
 tags:
-  - daily
+  - solo
   - lunchtime
   - PC
   - micro

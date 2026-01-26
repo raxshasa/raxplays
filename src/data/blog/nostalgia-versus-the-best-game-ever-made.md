@@ -6,7 +6,8 @@ postSlug: nostalgia-versus-the-best-game-ever-made
 featured: false
 draft: false
 tags:
-  - daily
+  - solo
+  - controller
   - n64
   - adventure
 games:

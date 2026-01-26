@@ -6,7 +6,7 @@ postSlug: giving-altrincham-a-piece-of-my-mind-at-lunch-time
 featured: false
 draft: false
 tags:
-  - daily
+  - solo
   - micro
   - lunchtime
   - management

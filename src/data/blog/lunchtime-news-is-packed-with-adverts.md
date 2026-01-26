@@ -6,7 +6,7 @@ postSlug: lunchtime-news-is-packed-with-adverts
 featured: false
 draft: false
 tags:
-  - daily
+  - solo
   - micro
   - lunctime
   - PC

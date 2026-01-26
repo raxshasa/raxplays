@@ -6,7 +6,6 @@ postSlug: football-and-its-many-forms
 featured: false
 draft: false
 tags:
-  - daily
   - with friends
   - arcade
   - simulation

@@ -15,7 +15,7 @@ postSlug: ${slug}
 featured: false
 draft: true
 tags:
-  - daily
+  - solo
 games:
   - 
 currentScore: 

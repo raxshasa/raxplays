@@ -10,7 +10,6 @@ games:
   - "Cities Skylines 2"
 currentScore: 5.5
 tags:
-  - daily
   - solo
   - PC
   - city builder

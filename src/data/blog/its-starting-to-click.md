@@ -6,7 +6,7 @@ postSlug: its-starting-to-click
 featured: false
 draft: false
 tags:
-  - daily
+  - solo
   - micro
   - lunchtime
   - management
