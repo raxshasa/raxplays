@@ -14,6 +14,7 @@ games:
   - "Darkest Dungeon 2"
 currentScore: 7.0
 description: "Following up on one of the most uniquely atmospheric games out there is always going to be a big ask."
+nowplaying: "Working towards"
 ---
 
 I'm only 5 hours in to Darkest Dungeon 2, a follow up to a game I loved, dreaded playing and never finished.
