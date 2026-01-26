@@ -33,7 +33,7 @@ The Steam Deck has been a great purchase for me. While I hide away in my office 
 
 <hr>
 
-### Analgue 3D
+### Analogue 3D
 
 I'm not a retro nerd by any means, but the Analogue 3D tickled a big nostalgia itch for me. Combined with the fact it's fuss free and the hardware looked lovely, I was sold. I'll basically always refer to it as the "N64" rather than the Analogue 3D, because in reality I'm 13 years old.
 
