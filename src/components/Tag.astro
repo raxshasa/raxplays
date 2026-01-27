@@ -9,7 +9,7 @@ export interface Props {
 
 const { tag, tagName, size = "sm" } = Astro.props;
 
-const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, ""); 
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
 const tagHref = `${baseUrl}/tags/${tag}/`;
 ---
 
