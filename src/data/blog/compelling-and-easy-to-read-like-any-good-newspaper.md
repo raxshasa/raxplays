@@ -14,7 +14,7 @@ games:
   - News Tower
 currentScore: 8.0
 description: "Now I'm over 5 hours in, I feel like I'm starting to scratch the surface of this deep and compelling title that is deceptive in its presentation"
-nowplaying: "Working towards"
+nowplaying: "I'm trying to work towards getting a third page for the paper while taking a few territories off of my rivals. Also looking to unlock the high society group."
 ---
 
 News Tower feels like a a trap: in a good way. It's inherently a simple looking game. You're looking at a cut-away 2D representation of a building. There are some maps and other boards to look at, but by and large, you're staring at your little animated staff wandering around the place.
