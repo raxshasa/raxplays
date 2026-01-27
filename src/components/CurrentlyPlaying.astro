@@ -1,0 +1,76 @@
+---
+import { getCollection } from "astro:content";
+import { slugifyStr } from "@/utils/slugify";
+import GameCard from "./GameCard.astro";
+
+const allPosts = await getCollection("blog", post => {
+  // Debug: Check if the post has the field
+  return !post.data.draft && post.data.nowplaying !== undefined;
+});
+
+// Sort by date newest first
+const sortedPosts = allPosts.sort(
+  (a, b) => b.data.pubDatetime.valueOf() - a.data.pubDatetime.valueOf()
+);
+
+// Get the 3 most recent unique games
+const featuredGames = [];
+const seenGames = new Set();
+
+for (const post of sortedPosts) {
+  const gameName = post.data.games?.[0];
+  if (gameName && !seenGames.has(gameName)) {
+    featuredGames.push({
+      name: gameName,
+      status: post.data.nowplaying,
+      score: post.data.currentScore,
+      slug: slugifyStr(gameName),
+    });
+    seenGames.add(gameName);
+  }
+  if (featuredGames.length === 3) break;
+}
+
+if (featuredGames.length === 0) return null;
+---
+
+<section id="currently-playing" class="pt-8 pb-12">
+  <h2 class="mb-6 text-2xl font-semibold tracking-wide">Currently Playing</h2>
+
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+    {
+      featuredGames.map(game => (
+        <div class="border-skin-line bg-skin-card flex flex-col rounded-lg border p-4 shadow-sm">
+          <div class="mb-4 flex items-start gap-4">
+            <div class="h-16 w-16 shrink-0">
+              <GameCard
+                name={game.name}
+                slug={game.slug}
+                image={`/assets/games/${game.slug}.jpg`}
+              />
+            </div>
+
+            <div class="flex flex-col justify-center">
+              <h3 class="text-skin-accent leading-tight font-bold">
+                {game.name}
+              </h3>
+              {game.score && (
+                <div class="mt-1">
+                  <span class="bg-skin-accent/10 text-skin-accent rounded px-1.5 py-0.5 text-xs font-medium">
+                    Rated {game.score.toFixed(1)}
+                  </span>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div class="border-skin-line/50 mt-8 border-t pt-3">
+            <p class="text-skin-base text-sm leading-relaxed italic">
+              "{game.status}"
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

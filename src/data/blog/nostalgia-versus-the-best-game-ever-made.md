@@ -14,6 +14,7 @@ games:
   - "Legend of Zelda: Ocarina of Time"
 currentScore: 9.0
 description: "Ocarina of Time is, I suspect, high a lot of top 3 type lists for a lot of people. How much of that is nostalgia?"
+nowplaying: "I've just finished Death Mountain, so will now be heading to Zora's Domain... I think."
 ogImage: src/assets/images/ocarina/ocarina-in-the-analogue.jpg
 ---
 

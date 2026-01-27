@@ -16,6 +16,7 @@ games:
   - Football Manager 26
 currentScore: 6.5
 description: "I win a cup and the youth team is starting to look up. The difficult second season looks to be shaping up nicely."
+nowplaying: "Dipping into pre-season so I'm looking for decent free transfers to fill out my ropey looking squad, plus pick up some young PL loans."
 ---
 
 So now I've [_actually_ finished the season](winning-ways-and-the-end-of-a-season), it's time to roll on into a brand new league. Having had The Message, that I'm seeing a golden generation in the youth team, I'm pretty excited.

@@ -20,6 +20,7 @@ games:
   - 
 currentScore: 
 description: "Brief summary of the post here."
+nowplaying: "Some update on what I'm currently doing in game"
 ---
 
 Write your intro here...
