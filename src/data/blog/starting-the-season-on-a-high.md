@@ -4,7 +4,7 @@ pubDatetime: 2026-01-29T21:57:15.113Z
 title: "Starting the season on a high"
 postSlug: starting-the-season-on-a-high
 featured: false
-draft: true
+draft: false
 tags:
   - solo
   - management
