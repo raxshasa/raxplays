@@ -1,14 +1,14 @@
 export const SITE = {
   website: "https://raxshasa.github.io/raxplays/", // replace this with your deployed domain
   author: "raxshasa",
-  desc: "Absolute nonsense.",
+  desc: "Howdy, I'm raxshasa. This is a personal blog about games I play.",
   title: "raxplays",
   base: "/raxplays",
   profile: "https://raxshasa.github.io/",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "ocarina-in-the-analogue.jpg",
   lightAndDarkMode: false,
-  postPerIndex: 4,
-  postPerPage: 4,
+  postPerIndex: 3,
+  postPerPage: 5,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   showArchives: false,
   showBackButton: true, // show back button in post detail
