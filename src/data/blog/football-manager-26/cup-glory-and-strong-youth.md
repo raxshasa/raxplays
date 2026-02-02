@@ -8,8 +8,8 @@ draft: false
 tags:
   - solo
   - lunchtime
+  - short
   - PC
-  - micro
   - management
   - simulation
 games:

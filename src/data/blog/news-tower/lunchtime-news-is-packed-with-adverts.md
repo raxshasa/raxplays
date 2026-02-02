@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - solo
-  - micro
+  - short
   - lunctime
   - PC
   - simulation

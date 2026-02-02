@@ -22,6 +22,7 @@ nowplaying: "First time getting into the game, so mostly learning the systems. L
 After a long time on my wishlist, something tickled my brain and I picked up _No Rest_ on sale. I've naturally not spent a lot of time with it, but it has made some early impressions. It's an Early Access title.
 
 ## Dripping with atmosphere
+
 Someone, at some point during the development of this game, has uttered the words "Dishonoured was a nice looking video game". Both _Dishonoured_ titles were lovely to look at: atmospheric and rocking a distinctive art style. I think it would be unfair to say that _No Rest_ has copied that style, it's far more "oil on canvas" in technique, but it - at the very least - feels like an homage. It's very evocative of the city of Dunwall, and for me that's a very good thing.
 
 ![I mean just look at this wide shot from an early cinematic](src/assets/images/no-rest-for-the-wicked/rfw-background.jpg)
@@ -40,11 +41,11 @@ Overall, the visuals are done well. There's a slightly too blue shader over the 
 _That one guy who always blinks when the camera goes_
 
 ## Hard as Souls
+
 The game lists itself as a Souls-like and I get it. I'm early in the game, but it's crunchy and impactful in terms of combat. I'm still a way off mastering this stuff, but I can already feel the creeping dread at facing certain enemy types. Especially where there is more than one. It seems like this title _might_ be harder than I tend to opt for, but there are options to drop that in the settings if I'm really not feeling it. I had fun with the first boss, and learning attack patterns is generally OK, so I'm not completely put off on that front. Run backs seems fine, too.
 
 Environmentally, it's sometimes hard to navigate. There's no minimap - a decision I like - but it can make it tough to get around. I'm also not always entirely sure where to go. Again, I'm pleased there's no glowing arrow pandering to me, but I'm still getting into the swing of things and a _little_ bit of signposting would help. With that said, the literal signposts in the main city were very well implemented, bringing up a simple interface on the bottom of the screen for a few seconds pointing out where you should go.
 
 ## Next up
+
 I'm of course still incredibly early and finding my way. I'm generally very much looking forward to seeing some more of the game and trying to git gud.
-
-
