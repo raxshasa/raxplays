@@ -16,6 +16,7 @@ import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
 import GameCard from "@components/GameCard.astro";
 import ScoreDelta from "@components/ScoreDelta.astro";
+import ReviewStats from "@components/ReviewStats.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -32,13 +33,16 @@ const {
   canonicalURL,
   pubDatetime,
   modDatetime,
+  games,
+  currentScore,
+  finalScore,
+  type,
   timezone,
   tags,
   hideEditPost,
 } = post.data;
 
 const { Content } = await render(post);
-const { games, currentScore } = post.data;
 
 let ogImageUrl: string | undefined;
 
@@ -78,6 +82,10 @@ const allPosts = posts.map(({ data: { title }, id, filePath }) => ({
   filePath,
 }));
 
+const isReview = type === "review";
+const gameSlug = games && games.length > 0 ? slugifyStr(games[0]) : null;
+const coverImage = `/raxplays/assets/reviews/${gameSlug}.jpg`;
+
 const currentPostIndex = allPosts.findIndex(a => a.id === post.id);
 
 const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
@@ -96,42 +104,68 @@ const nextPost =
     ]}
     data-pagefind-body
   >
-    <h1
-      transition:name={slugifyStr(title)}
-      class="inline-block text-2xl font-bold text-accent sm:text-3xl"
-    >
-      {title}
-    </h1>
+    {
+      isReview ? (
+        <div class="review-card-item my-8">
+          <div
+            class="review-card-bg"
+            style={`background-image: url(${coverImage})`}
+          >
+            <div class="review-card-overlay">
+              <div class="review-card-content">
+                <h1 class="review-title">{title}</h1>
+                <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <>
+          <h1
+            transition:name={slugifyStr(title)}
+            class="inline-block text-2xl font-bold text-accent sm:text-3xl"
+          >
+            {title}
+          </h1>
 
-    <div class="my-2 flex items-center gap-2">
-      <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
-      <span
-        aria-hidden="true"
-        class:list={[
-          "max-sm:hidden",
-          { hidden: !SITE.editPost.enabled || hideEditPost },
-        ]}>|</span
-      >
-    </div>
-    <div class="not-prose mt-4 w-full">
-      {
-        games && games.length > 0 && (
-          <ul class="m-0 grid list-none grid-cols-2 gap-4 p-0 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-            {games.map(game => (
-              <GameCard
-                name={game}
-                slug={slugifyStr(game)}
-                image={`/assets/games/${slugifyStr(game)}.jpg`}
-              />
-            ))}
-          </ul>
-        )
-      }
-    </div>
+          <div class="my-2 flex items-center gap-2">
+            <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
+            <span
+              aria-hidden="true"
+              class:list={[
+                "max-sm:hidden",
+                { hidden: !SITE.editPost.enabled || hideEditPost },
+              ]}
+            >
+              |
+            </span>
+          </div>
+
+          <div class="not-prose mt-4 w-full">
+            {games && games.length > 0 && (
+              <ul class="m-0 grid list-none grid-cols-2 gap-4 p-0 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                {games.map(game => (
+                  <GameCard
+                    name={game}
+                    slug={slugifyStr(game)}
+                    image={`/assets/games/${slugifyStr(game)}.jpg`}
+                  />
+                ))}
+              </ul>
+            )}
+          </div>
+        </>
+      )
+    }
     <article
       id="article"
       class="app-prose mx-auto mt-8 max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
     >
+      {
+        type === "review" && games?.[0] && finalScore !== undefined && (
+          <ReviewStats gameName={games[0]} finalScore={finalScore} />
+        )
+      }
       <Content />
     </article>
 
@@ -309,3 +343,40 @@ const nextPost =
     window.scrollTo({ left: 0, top: 0, behavior: "instant" })
   );
 </script>
+
+<style>
+  .review-card-bg {
+    background-size: cover;
+    background-position: center;
+    min-height: 280px;
+    display: flex;
+  }
+  .review-card-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background: linear-gradient(
+      to right,
+      rgba(var(--color-fill-rgb), 0.8) 0%,
+      transparent 100%
+    );
+  }
+  .review-card-content {
+    max-width: 70%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  }
+  .review-title {
+    color: #1a1a1a !important; /* Fixed dark gray/black */
+    font-size: 1.5rem !important;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+  }
+</style>
