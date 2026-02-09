@@ -1,11 +1,43 @@
 ---
-// src/components/GameCard.astro
-const { name, slug, image } = Astro.props;
+export interface Props {
+  name: string;
+  slug: string;
+  image: string;
+  dataAlpha?: string;
+  dataRecent?: number;
+  dataScore?: number;
+}
+
+const { name, slug, image, dataAlpha, dataRecent, dataScore = 0 } = Astro.props;
+
+const displayDate = dataRecent
+  ? new Date(dataRecent).toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+    })
+  : "";
 ---
 
 <li
   class="game-card-container group relative m-0 aspect-[2/3] list-none overflow-hidden rounded-xl bg-neutral-800 shadow-lg transition-all duration-300 hover:-translate-y-2"
+  data-alpha={dataAlpha}
+  data-recent={dataRecent}
+  data-score={dataScore}
 >
+  <a href={`/games/${slug}/`} class="relative block h-full w-full">
+    <div class="sort-metadata absolute top-2 left-2 z-20 flex flex-col gap-1">
+      <span
+        class="badge-score bg-skin-accent text-skin-fill rounded px-1.5 py-0.5 text-[10px] font-black shadow-md"
+      >
+        {dataScore > 0 ? dataScore.toFixed(1) : "—"}
+      </span>
+      <span
+        class="badge-date rounded bg-neutral-900/80 px-1.5 py-0.5 text-[10px] font-bold text-white backdrop-blur-sm"
+      >
+        {displayDate}
+      </span>
+    </div>
+  </a>
   <div
     class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-neutral-500"
   >
@@ -68,6 +100,24 @@ const { name, slug, image } = Astro.props;
     right: 0;
     padding: 1rem;
     pointer-events: none; /* Allows clicks to pass through to the link */
+  }
+
+  /* Use :global to break out of Astro's scoping for parent classes */
+  :global(#game-grid.show-score) .badge-score {
+    display: block !important;
+  }
+
+  :global(#game-grid.show-recent) .badge-date {
+    display: block !important;
+  }
+
+  /* Base styling for the badges (ensures they stay hidden by default) */
+  .badge-score,
+  .badge-date {
+    display: none;
+    background: white;
+    color: black;
+    font-size: 0.9rem;
   }
 
   /* Hide the text when the card itself is 165px or narrower */
