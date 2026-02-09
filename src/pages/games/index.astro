@@ -8,26 +8,92 @@ import { SITE } from "@config";
 import { slugifyStr } from "@utils/slugify";
 import GameCard from "@components/GameCard.astro";
 
-const posts = await getCollection("blog");
+const allPosts = await getCollection("blog", ({ data }) => !data.draft);
 
-// Get all unique games from all posts
-const games = [...new Set(posts.flatMap(post => post.data.games || []))];
+const gameMap = new Map();
 
-const alphabetizedGames = games.sort((a, b) => a.localeCompare(b));
+allPosts.forEach(post => {
+  post.data.games?.forEach(game => {
+    const current = gameMap.get(game) || {
+      name: game,
+      latestDate: new Date(0),
+      maxScore: 0,
+      slug: slugifyStr(game),
+    };
+
+    // Update Date
+    if (post.data.pubDatetime > current.latestDate) {
+      current.latestDate = post.data.pubDatetime;
+    }
+
+    // Update Score
+    const scoreVal = post.data.finalScore || post.data.currentScore || 0;
+    if (scoreVal > current.maxScore) {
+      current.maxScore = scoreVal;
+    }
+
+    gameMap.set(game, current);
+  });
+});
+
+const games = Array.from(gameMap.values()).sort(
+  (a, b) => b.latestDate.getTime() - a.latestDate.getTime()
+);
 ---
 
 <Layout title={`Games | ${SITE.title}`}>
   <Header activeNav="games" />
   <Main pageTitle="Games" pageDesc="All the games I've written about.">
+    <div
+      class="mt-4 flex items-center justify-end gap-2"
+      style="margin-top: -70px"
+    >
+      <div class="mt-4 flex items-center justify-end gap-3" id="sort-controls">
+        <span class="text-xs font-bold tracking-wider uppercase opacity-60"
+          >Sort:</span
+        >
+
+        <div
+          class="border-skin-line bg-skin-card flex overflow-hidden rounded-md border"
+        >
+          <button
+            data-sort="recent"
+            class="sort-btn active hover:bg-skin-accent hover:text-skin-fill px-3 py-1.5 text-xs font-medium transition-colors"
+            title="Most Recent"
+          >
+            Recent
+          </button>
+          <button
+            data-sort="alpha"
+            class="sort-btn border-skin-line bg-skin-accent text-skin-fill hover:bg-skin-accent hover:text-skin-fill border-l px-3 py-1.5 text-xs font-medium transition-colors"
+            title="A-Z"
+          >
+            A-Z
+          </button>
+          <button
+            data-sort="score"
+            class="sort-btn border-skin-line hover:bg-skin-accent hover:text-skin-fill border-l px-3 py-1.5 text-xs font-medium transition-colors"
+            title="Highest Score"
+          >
+            Score
+          </button>
+        </div>
+      </div>
+    </div>
+
     <ul
+      id="game-grid"
       class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4"
     >
       {
-        alphabetizedGames.map(game => (
+        games.map(game => (
           <GameCard
-            name={game}
-            slug={slugifyStr(game)}
-            image={`/assets/games/${slugifyStr(game)}.jpg`}
+            name={game.name}
+            slug={game.slug}
+            image={`/assets/games/${game.slug}.jpg`}
+            dataAlpha={game.name.toLowerCase()}
+            dataRecent={game.latestDate.getTime()}
+            dataScore={game.maxScore}
           />
         ))
       }
@@ -35,3 +101,70 @@ const alphabetizedGames = games.sort((a, b) => a.localeCompare(b));
   </Main>
   <Footer />
 </Layout>
+
+<script is:inline>
+  function initSorting() {
+    const container = document.querySelector("#sort-controls");
+    const grid = document.querySelector("#game-grid");
+    if (!container || !grid) return;
+
+    const buttons = container.querySelectorAll(".sort-btn");
+    const items = Array.from(grid.children);
+
+    function applySort(sortBy) {
+      // 1. Update Button UI
+      buttons.forEach(btn => {
+        const isMatch = btn.getAttribute("data-sort") === sortBy;
+        btn.classList.toggle("bg-skin-accent", isMatch);
+        btn.classList.toggle("text-skin-fill", isMatch);
+      });
+
+      // 2. Update Grid Metadata Visibility
+      // Remove previous mode classes
+      grid.classList.remove("show-score", "show-recent");
+      // Add new mode class
+      if (sortBy === "score") grid.classList.add("show-score");
+      if (sortBy === "recent") grid.classList.add("show-recent");
+
+      // 3. Perform Sort (Keep your existing sort logic here)
+      const sorted = items.sort((a, b) => {
+        if (sortBy === "alpha")
+          return a
+            .getAttribute("data-alpha")
+            .localeCompare(b.getAttribute("data-alpha"));
+        if (sortBy === "recent")
+          return (
+            Number(b.getAttribute("data-recent")) -
+            Number(a.getAttribute("data-recent"))
+          );
+        if (sortBy === "score")
+          return (
+            parseFloat(b.getAttribute("data-score")) -
+            parseFloat(a.getAttribute("data-score"))
+          );
+        return 0;
+      });
+
+      sorted.forEach(item => grid.appendChild(item));
+      localStorage.setItem("gameSortOrder", sortBy);
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () =>
+        applySort(btn.getAttribute("data-sort"))
+      );
+    });
+
+    const savedSort = localStorage.getItem("gameSortOrder") || "recent";
+    applySort(savedSort);
+  }
+
+  initSorting();
+  document.addEventListener("astro:after-swap", initSorting);
+</script>
+
+<style>
+  .bg-skin-accent {
+    background: #e3e3e3;
+  }
+</style>
