@@ -13,7 +13,7 @@ const allPosts = await getCollection("blog", ({ data }) => !data.draft);
 const gameMap = new Map();
 
 allPosts.forEach(post => {
-  post.data.games?.forEach(game => {
+  post.data.games?.forEach((game, index) => {
     const current = gameMap.get(game) || {
       name: game,
       latestDate: new Date(0),
@@ -24,8 +24,10 @@ allPosts.forEach(post => {
     // Update Date
     if (post.data.pubDatetime > current.latestDate) {
       current.latestDate = post.data.pubDatetime;
-      const scoreVal = post.data.currentScore || 0;
-      current.maxScore = scoreVal;
+      if (index === 0) {
+        const scoreVal = post.data.currentScore || 0;
+        current.maxScore = scoreVal;
+      }
     }
 
     /* Update Score
