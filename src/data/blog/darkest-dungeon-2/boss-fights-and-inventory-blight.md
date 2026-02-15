@@ -17,7 +17,7 @@ description: "I'm stil early in the opinino forming process of this one. As some
 nowplaying: "Working on finding more of the purpose here. Engaging in my first boss fight, and actually winning"
 ---
 
-I'm stil early in the opinin forming process of this one. As some aspects start to shine a little more, I'm finding things I don't love.
+I'm stil early in the opinion forming process of this one. As some aspects start to shine a little more, I'm finding things I don't love.
 
 Want to talk about boss fights and inventory management. Firstly, though, I've mentioned before that I love the look of this title, but that it really needs to be shown in motion to appreciate the animation quality. So here it is.
 
