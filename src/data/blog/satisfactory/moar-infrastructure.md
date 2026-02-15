@@ -7,8 +7,6 @@ featured: false
 draft: false
 tags:
   - solo
-  - short
-  - lunchtime
   - factory
   - base building
 games:
