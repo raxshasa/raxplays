@@ -39,8 +39,8 @@ I therefore go out to find some more nodes to start pushing out screws. It's the
   <source src="/raxplays/assets/videos/satisfactory-building.mp4" type="video/mp4">
 </video>
 
-Again, this is one of those things I love about the game. A manifold is a set of machines with belts splitting bewteen them, with quantities roughly balanced. 
+Again, this is one of those things I love about the game. A manifold is a set of machines with belts splitting bewteen them, with quantities roughly balanced.
 
-I didn't quite get as far as I would have liked. I need reinforced plates in order to get to frames. I haven't quite got my quantities and setup right, meaning it's messier than I'd have liked. I'm going to tear all of this down soon anyway, so it's not a big deal, but it's taking me a while to get back into the swing of the aesthetics! 
+I didn't quite get as far as I would have liked. I need reinforced plates in order to get to frames. I haven't quite got my quantities and setup right, meaning it's messier than I'd have liked. I'm going to tear all of this down soon anyway, so it's not a big deal, but it's taking me a while to get back into the swing of the aesthetics!
 
 Anyway, I should be able to pop it all together next time, where I'll be able to move on to the next tier.
