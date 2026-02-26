@@ -28,7 +28,7 @@ Early on, blowing fuses is pretty common. You likely got enough self sustaining 
 
 At my current stage, it's a simple case of getting a couple more coal plants going and I'm away. I needed a little more water and a pump as a result, but it was fine. Late game, blowing a fuse where you haven't properly segmented your power grid can be a multi-hour process to get back online. I had it once: I needed to jump start my nuclear plant once I'd moved it onto its own loop and then turn on everything else incrementally. Personally I think it's lots of fun, but your mileage may vary.
 
-I would love to know how much discussion went into the design of these systems. Inherently, this is a punishment mechanic: it serves to "slow you down" and prevent you doing other things. But it's also another logistical challenge that ties into all of the same systems that the rest of the game relies on. Late on, in the age of nukes, there's waste and radiation to deal with, too. 
+I would love to know how much discussion went into the design of these systems. Inherently, this is a punishment mechanic: it serves to "slow you down" and prevent you doing other things. But it's also another logistical challenge that ties into all of the same systems that the rest of the game relies on. Late on, in the age of nukes, there's waste and radiation to deal with, too.
 
 As with other areas of the game, lots of quality of life changes have gone into this aspect. Things like allowing biomass burners to be belt fed, when previously they were manual only. Ensuring that power generators can have power shards inserted, which linearly increases their output etc. It's interesting.
 

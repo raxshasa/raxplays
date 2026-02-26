@@ -18,7 +18,7 @@ description: "I played a little over an hour of current breakout hit Mewgenics a
 nowplaying: "I've only just started, so I've been breeding my first kittens and killing some rats in order to learn the mechanics"
 ---
 
-I started this session with the Darkest Dungeon 2. My thoughts on this one are broadly the same as I've had previousy, except the session felt a little slicker. Similarly to how I've tried to be [more thoughoutful while playing Football Manager 26](its-starting-to-click), I've been taking a little more time with things, which is really helping with understanding. 
+I started this session with the Darkest Dungeon 2. My thoughts on this one are broadly the same as I've had previousy, except the session felt a little slicker. Similarly to how I've tried to be [more thoughoutful while playing Football Manager 26](its-starting-to-click), I've been taking a little more time with things, which is really helping with understanding.
 
 It's not just familiarity, although that's part of it, it's the piecing together of context from various items that I was otherwise ignoring.
 
@@ -26,7 +26,7 @@ Today, however, it's about Mewgenics.
 
 ## Madcat
 
-I've played just over an hour, so it's fair to say I'm still forming opinions. Mewgenics opens well. It's clearly irreverent and silly: this comes across in the opening cinematic sequence and within about 15 minutes you're ending the day to allow one of your cats to shag another one of your cats. 
+I've played just over an hour, so it's fair to say I'm still forming opinions. Mewgenics opens well. It's clearly irreverent and silly: this comes across in the opening cinematic sequence and within about 15 minutes you're ending the day to allow one of your cats to shag another one of your cats.
 
 This is how you end up with more cats, just like in real life.
 
@@ -36,6 +36,6 @@ The premise of the game isn't 100% clear yet. You are someone who, for reasons, 
 
 I've not gotten too far otherwise. I've taken on the boss in what I think is the first "proper" area after the tutorial, which was fun. The fights in general - especially the boss fights - seem like they will have some nice personality to them.
 
-As it stands, the mechanics are nice enough and the tone is fun. I've not seen enough to see how more is extracted from the systems that exist and how it'll all fit together to score it more highly. 
+As it stands, the mechanics are nice enough and the tone is fun. I've not seen enough to see how more is extracted from the systems that exist and how it'll all fit together to score it more highly.
 
 I also don't _love_ the art style. I'm not a mega-shiny graphics man, but the hand drawn style is a little too twee for me. I'm feeling like it might all come together for me and start working nicely, but I'm not there yet. Keen to play more on Deck, though.
