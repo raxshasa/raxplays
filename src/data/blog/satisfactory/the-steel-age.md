@@ -9,6 +9,7 @@ tags:
   - solo
   - factory
   - base building
+  - PC
 games:
   - "Satisfactory"
 currentScore: 9.0

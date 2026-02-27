@@ -8,7 +8,8 @@ draft: false
 tags:
   - solo
   - factory
-  - base buildingo
+  - base building
+  - PC
 games:
   - "Satisfactory"
 currentScore: 9.0

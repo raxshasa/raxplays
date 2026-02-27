@@ -2,7 +2,7 @@
 author: Olly Percival
 pubDatetime: 2026-02-25T12:07:36.846Z
 title: "A terrifyingly effective demo"
-postSlug: a-terrifyiongly-effective-demo
+postSlug: a-terrifyingly-effective-demo
 featured: false
 draft: false
 tags:
@@ -10,6 +10,7 @@ tags:
   - lunchtime
   - demo
   - card battler
+  - PC
 games:
   - "Vampire Crawlers"
 currentScore: 6.5
@@ -17,7 +18,7 @@ description: "So while it's technically called Vampire Crawlers: The Turbo Wildc
 nowplaying: "I played for maybe 40 minutes, so really just a first look at mechanics and getting a sense of what's going on"
 ---
 
-So while it's technically called Vampire Crawlers: The Turbo Wildcard from Vampire Survivors, I'm very much not going to refer to it as that... But yes, poncle has released a demo, which is a spin off from smash hit Vampire Survivors, this time as a card battler.
+So while it's technically called _Vampire Crawlers: The Turbo Wildcard from Vampire Survivors_, I'm very much not going to refer to it as that... But yes, poncle has released a demo, which is a spin off from smash hit Vampire Survivors, this time as a card battler.
 
 ## Demo Dealer
 
