@@ -6,7 +6,7 @@ postSlug: the-difficult-second-album
 featured: false
 draft: false
 tags:
-  - ssolo
+  - solo
   - factory
   - base building
   - PC
