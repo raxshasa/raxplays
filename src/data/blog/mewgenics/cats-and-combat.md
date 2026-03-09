@@ -19,7 +19,7 @@ nowplaying: "I've found my favourite cat so far - Nico Robin - who is an absolut
 
 After a couple of tough runs, I was starting to rethink my enthusiasm about crafting builds: there's some RNG to deal with here. But a word on combat...
 
-In short, it's snappy and well put together. Many of the abilities are fun and synergise well with one another. Even if the RNG gods deal you a bad hand, there's _probably_ some tools at your disposable to deal with it, to an extent.
+In short, it's snappy and well put together. Many of the abilities are fun and synergise well with one another. Even if the RNG gods deal you a bad hand, there's _probably_ some tools at your disposal to deal with it, to an extent.
 
 ## Combat kitties
 
