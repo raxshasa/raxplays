@@ -30,7 +30,7 @@ Once characters are created and the game is flowing, however, things come togeth
 
 ## New thinking
 
-On the whole, most board games are based on competitiion, combat or both. You are either trying to beat your opponents through strategy or combat. You are perhaps working together to "beat" the game. Whatever it might be. 
+On the whole, most board games are based on competitiion, combat or both. You are either trying to beat your opponents through strategy or combat. You are perhaps working together to "beat" the game. Whatever it might be.
 
 In Earthborne Rangers that doesn't feel like it exists. You are cooperative, but your goal never feels like it's "beating" the game, it's about interacting with the spaces it offers and flora and fauna that appear. 
 
@@ -38,4 +38,4 @@ The mechanics are predicated on providing interesting decision spaces that you c
 
 There's a feel that runs through the core of this game that is simply _different_, and I'm here for it.
 
-I'm sure we'll be playing this again, where I will definitely want to pick up on more specific aspects of this game.
+I'm sure we'll be playing this again, where I will definitely want to pick up on more specific aspects of this game, such as the card interactions.
