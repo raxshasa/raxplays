@@ -13,7 +13,11 @@ import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
 import CurrentlyPlaying from "@components/CurrentlyPlaying.astro";
 
-const posts = await getCollection("blog");
+console.log("Is this Dev Mode?", import.meta.env.DEV);
+
+const posts = await getCollection("blog", ({ data }) => {
+  return import.meta.env.DEV || !data.draft;
+});
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
