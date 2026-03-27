@@ -4,7 +4,7 @@ pubDatetime: 2026-03-26T22:33:43.278Z
 title: "Story driven"
 postSlug: story-driven
 featured: false
-draft: true
+draft: false
 tags:
   - solo
   - rpg
