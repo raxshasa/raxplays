@@ -13,7 +13,7 @@ import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
 import CurrentlyPlaying from "@components/CurrentlyPlaying.astro";
 
-console.log("Is this Dev Mode?", import.meta.env.DEV);
+// console.log("Is this Dev Mode?", import.meta.env.DEV);
 
 const posts = await getCollection("blog", ({ data }) => {
   return import.meta.env.DEV || !data.draft;
