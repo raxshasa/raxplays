@@ -20,7 +20,7 @@ nowplaying: "Starting out with new rangers with a couple of others, we played th
 
 Spolier alert, I think this might be one of the best board games I've ever played. The mix of theme, mechanics and discovery are, in my view, unique and delightful.
 
-Earthborne Rangers looks lovely and is well produced, but it would all be for nothing if the mechanics didn't click. 
+Earthborne Rangers looks lovely and is well produced, but it would all be for nothing if the mechanics didn't click.
 
 ## Ramp up
 
@@ -32,7 +32,7 @@ Once characters are created and the game is flowing, however, things come togeth
 
 On the whole, most board games are based on competitiion, combat or both. You are either trying to beat your opponents through strategy or combat. You are perhaps working together to "beat" the game. Whatever it might be.
 
-In Earthborne Rangers that doesn't feel like it exists. You are cooperative, but your goal never feels like it's "beating" the game, it's about interacting with the spaces it offers and flora and fauna that appear. 
+In Earthborne Rangers that doesn't feel like it exists. You are cooperative, but your goal never feels like it's "beating" the game, it's about interacting with the spaces it offers and flora and fauna that appear.
 
 The mechanics are predicated on providing interesting decision spaces that you can crunk through in order to... do whatever you like. In general, you're probably trying to make your way somewhere and the game provides missions as something to focus on, but on the whole you are free to set your own direction. Want to head to the mountains? Go for it. Fancy following up on an oblique reference to treasure in the swamp? Fill your boots. It's properly lovely.
 

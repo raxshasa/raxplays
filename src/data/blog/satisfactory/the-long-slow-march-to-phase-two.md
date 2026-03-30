@@ -25,6 +25,6 @@ My initial power problems were a bit worrying. I spent some time totting up wher
 
 So I got started on producing the versatile frameworks and, after 10 minutes or so, realised I also needed smart plating and that I had definitely turned that off. I made some calculations and realised that I could pretty comfortably turn out 10 smart plates a minute and roughly the same number of versatile frameworks. It didn't take too long and so I threw it together.
 
-But then I started doing the maths. I need 1,000 of both of those items. Generating 10 a minute is a little over an hour and a half. 
+But then I started doing the maths. I need 1,000 of both of those items. Generating 10 a minute is a little over an hour and a half.
 
 Sweet. Time to go explore and find some more hard drives I guess!

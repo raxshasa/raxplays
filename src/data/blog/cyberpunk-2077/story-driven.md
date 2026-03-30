@@ -23,7 +23,7 @@ There are some foibles, which I'll talk about, but on the whole the missions are
 
 ## The Good
 
-In open world games or RPGs in general, there are often a lot of quests thrown at you. At their most basic, these can be fetch quests, kills quests or very basic investigations. You often spend time tracking back and forth between various locations. 
+In open world games or RPGs in general, there are often a lot of quests thrown at you. At their most basic, these can be fetch quests, kills quests or very basic investigations. You often spend time tracking back and forth between various locations.
 
 ![At least in Cyberpunk there's often not much traffic in the world...](src/assets/images/cyberpunk/night-drive.jpg)
 _At least in Cyberpunk there's often not much traffic in the world..._
@@ -48,7 +48,7 @@ This is indicative of some of the bugginess that was rampant at launch and is, i
 ![Another image of a cityscape, just because I love them](src/assets/images/cyberpunk/cityscapes.jpg)
 _Another image of a cityscape, just because I love them_
 
-My other minor complaint is that it can be hard to follow. Never mind the sprawling nature of the main questlines, which are peppered with various names and characters, there are many, many more in the side missions. 
+My other minor complaint is that it can be hard to follow. Never mind the sprawling nature of the main questlines, which are peppered with various names and characters, there are many, many more in the side missions.
 
 When you're hopping between them, it can be overwhelming. I kind of just take it on faith that I've heard of some of the characters mentioned before and it's hard to retain all the names of people you're supposed to be friends with or mortal enemies with (outside of the main handful).
 

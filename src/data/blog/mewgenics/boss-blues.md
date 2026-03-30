@@ -23,7 +23,7 @@ I hit my first boss that absolutely handed my arse to me. I've kind of been wait
 
 From the start, Mewgenics has been pretty forgiving on build. Yes, it's possible to get it wrong or get unlucky and you all die, but there have been no hard requirements so far. This was, however, the first time a boss has specifically leant into a weakness in the group.
 
-Not having any AoE attacks was a bnit unusual, as I do tend to spec a ranger into that kind of build, but it meant I was at a loss. I played the battle out, but I knew I was going to lose very, very early. The boss, called something like Dyrrbuk, hopped out of the way of all of my attacks. 
+Not having any AoE attacks was a bnit unusual, as I do tend to spec a ranger into that kind of build, but it meant I was at a loss. I played the battle out, but I knew I was going to lose very, very early. The boss, called something like Dyrrbuk, hopped out of the way of all of my attacks.
 
 To be clear, this is on the whole a good thing. I like being forced to think about what I need to do and plan for possibilities. Even if the first instance is a little frustrating, especially when you lose a team of 'good cats'.
 

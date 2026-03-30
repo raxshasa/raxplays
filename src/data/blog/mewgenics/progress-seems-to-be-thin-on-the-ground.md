@@ -1,6 +1,6 @@
 ---
 author: Olly Percival
-pubDatetime: 2026-03-30T12:59:53.729Z
+pubDatetime: 2026-03-29T21:59:53.729Z
 title: "Progress seems to be thin on the ground"
 postSlug: progress-seems-to-be-thin-on-the-ground
 featured: false
@@ -21,11 +21,11 @@ After a thorough ass-kicking from a tough boss, I'm on a terrible run of results
 
 ## Death and cats
 
-I think it's the various "vendors" that I need to give cats to to move on. But I'm not entirely sure. 
+I think it's the various "vendors" that I need to give cats to to move on. But I'm not entirely sure.
 
-When you're not winning runs, you just don't get the same options when it comes to chucking cats in the cat pipe. This means I'm not feeling the "benefits" you get from having fresh, combat hardened kitties to donate to the various weirdos who care about this stuff. 
+When you're not winning runs, you just don't get the same options when it comes to chucking cats in the cat pipe. This means I'm not feeling the "benefits" you get from having fresh, combat hardened kitties to donate to the various weirdos who care about this stuff.
 
-The battles themselves are still good value. I lost one of my cat teams to a boss who generated a blazing inferno on the whole battlefield. It became a case of just trying to survive the fire longer than he did, which I failed at. 
+The battles themselves are still good value. I lost one of my cat teams to a boss who generated a blazing inferno on the whole battlefield. It became a case of just trying to survive the fire longer than he did, which I failed at.
 
 ## Next up
 
