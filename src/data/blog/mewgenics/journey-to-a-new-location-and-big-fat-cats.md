@@ -23,7 +23,7 @@ Some interesting distinctions in the meta have popped up and I'm exploring the n
 
 But the most interesting thing from this session was (Guillo)Tina attacking the cat house.
 
-It's unusual to have this sort of moment outside of the main loop of the game. It wasn't a super interesting battlefield or anything, but it was nice to make use of the cats that I've already wrung a run out of. 
+It's unusual to have this sort of moment outside of the main loop of the game. It wasn't a super interesting battlefield or anything, but it was nice to make use of the cats that I've already wrung a run out of.
 
 It was a simple enough battle, but good to mix it up. And my now "super retired" cats get a bonus little marker to pick them out as proper veterans, which I really like.
 
