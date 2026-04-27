@@ -21,4 +21,4 @@ I've been playing with some builds I don't typically go for and appreciating the
 
 ## Complex cards
 
-I find that in many roguelikes
+I find that in many roguelikes I
