@@ -17,7 +17,8 @@ description: "I've been playing with some builds I don't typically go for and ap
 nowplaying: "I gained an ascension level in the Silent and one in the Ironclad, with the Silent one being especially satisfying and poison-y"
 ---
 
-Write your intro here...
+I've been playing with some builds I don't typically go for and appreciating the UI accordingly.
 
-## Gameplay
-Details about the session.
+## Complex cards
+
+I find that in many roguelikes
