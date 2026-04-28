@@ -4,7 +4,7 @@ pubDatetime: 2026-04-26T22:38:31.283Z
 title: "Ascension"
 postSlug: ascension
 featured: false
-draft: true
+draft: false
 tags:
   - solo
   - steamdeck
@@ -21,4 +21,8 @@ I've been playing with some builds I don't typically go for and appreciating the
 
 ## Complex cards
 
-I find that in many roguelikes I
+I find that in many roguelikes I stick to a few builds / cards / items that I know and can easily understand. I am guilty of being a little too conservative and that often results in me not reaching the potential that some of those titles offer. There is kind-of-exception here, Balatro, where I did experiment a little more. However, I did ultimately still plump primarily for the things I knew.
+
+I'm trying to break this particular cycle with Slay the Spire and I'm selecting cards that I don't normally take on. These are generally the contextual, situational cards, as I on the whole can't be bothered to try to engineer the required situations. 
+
+THat's the thing I'm trying to avoid doing. In making that attempt
