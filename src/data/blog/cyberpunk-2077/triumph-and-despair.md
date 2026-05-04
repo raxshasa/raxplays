@@ -34,7 +34,19 @@ One of the things Phantom Liberty _properly_ nails in the general mood and vibe.
   </p>
 </div>
 
-The ending is a 
+The ending is a distilled microcosm of this: it veers between noir spy thriller, creeping horror, themes of despair and emotional beats. This varies based on the ending you choose, but the version I played was sublime. The payoff is fantastic.
+
+![Some of the set pieces are glorious to look at](src/assets/images/cyberpunk/song-window.jpg)
+_Some of the set pieces are glorious to look at_
+
+And the decision space feels crunchy and meaningful. At this point, you're pretty well invested in the characters. While they have relatively clear primary drives, their ultimate motivations are still a little grey, either in clarity or morality. Choosing one option or another is tough as you feel like you know 60% of how things will play out but the remainder is imperfect, brilliantly so.
+
+I ended choosing what I thought "my" V would choose. Really, that's what you want from a game like this. It should feel like a personal choice. I made that choice _knowing_ I was likely to not be a fan of the outcome. And it looks like that's probably accurate.
+
+And it's delivered with quality, too. Part of the reason the payoff is so great is the performance of the leads, as well as how they are realised. Idris Elba is outstanding as Solomon Reed here. As is Minji Chang as Songbird. Both deliver memorable and well balanced performances. This is backed up by quality in the character models and especially their animations. Reed moves with weight, with gravitas. He looks weary and pre-occupied. He's one of the most fully realised characters I've come across in a video game. Matched with the voice performances, this is a stellar effort.
+
+![Character models and animation are properly top notch](src/assets/images/cyberpunk/idris-car.jpg)
+_Character models and animation are properly top notch_
 
 ## Next up
 
