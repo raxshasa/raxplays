@@ -4,7 +4,7 @@ pubDatetime: 2026-05-01T23:42:31.357Z
 title: "Triumph and despair"
 postSlug: triumph-and-despair
 featured: false
-draft: true
+draft: false
 tags:
   - solo
   - rpg
