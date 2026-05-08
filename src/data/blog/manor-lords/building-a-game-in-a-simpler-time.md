@@ -11,6 +11,7 @@ tags:
   - city builder
   - simulation
   - lunchtime
+  - early access
 games:
   - "Manor Lords"
 currentScore: 6.0
