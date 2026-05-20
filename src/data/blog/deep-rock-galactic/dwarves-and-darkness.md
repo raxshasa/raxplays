@@ -10,6 +10,7 @@ tags:
   - PvE
   - shooter
   - PC
+  - dwarves
 games:
   - "Deep Rock Galactic"
 currentScore: 8.0
