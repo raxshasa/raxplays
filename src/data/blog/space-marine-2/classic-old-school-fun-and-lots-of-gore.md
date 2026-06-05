@@ -26,9 +26,15 @@ I like the lore of Warhammer, but have never really been into it in any major wa
 
 I didn't play for a long time, but it's not a game to muck about. The visuals are great, the presentation is lovely and the gameplay is quick and snappy. There are some controls that I'm not quite on top of yet, but the minute-to-minute fun is clear and obvious.
 
+![On the deck of whatever this ship is called](src/assets/images/space-marine-2/on-deck.jpg)
+_On the deck of whatever this ship is called_
+
 The game plops you in lovely looking environments and sends waves of enemies at you in interesting ways, mixing it up between ranged and melee threats, which are typically ever-present.
 
 Early impressions are that it's doing something that few games have done before: dynamic loadouts. I have a melee config and a ranged config. Switching from ranged to melee is as simple as calling for a melee attack. I then deal with the current group of enemies and it's back to shooting xenos in the head. This is part of the control scheme I haven't quite nailed yet, but I can feel that when it clicks it'll feel quite lovely.
+
+![Having a chat with this nice looking chap](src/assets/images/space-marine-2/with-the-magos.jpg)
+_Having a chat with this nice looking chap_
 
 ## Next up
 
