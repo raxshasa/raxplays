@@ -17,6 +17,7 @@ import { SITE } from "@/config";
 import GameCard from "@components/GameCard.astro";
 import ScoreDelta from "@components/ScoreDelta.astro";
 import ReviewStats from "@components/ReviewStats.astro";
+import galleryClientScript from "../components/gallery-client.ts?url";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -168,6 +169,8 @@ const nextPost =
       }
       <Content />
     </article>
+
+    <script type="module" src={galleryClientScript}></script>
 
     <hr class="my-8 border-dashed" />
     {
