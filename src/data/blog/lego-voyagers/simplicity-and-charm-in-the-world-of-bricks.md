@@ -1,8 +1,8 @@
 ---
 author: Olly Percival
 pubDatetime: 2026-05-10T12:08:35.668Z
-title: "Charm and bricks"
-postSlug: charm-and-bricks
+title: "Simplicity and charm in the world of bricks"
+postSlug: simplicity-and-charm-in-the-world-of-bricks
 featured: false
 draft: false
 tags:
