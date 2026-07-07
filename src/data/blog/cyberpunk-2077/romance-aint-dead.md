@@ -24,7 +24,7 @@ _I once again ended up at the Moth bar and, once again, felt the need for a scre
 
 ## Not Panam, but still good
 
-There was getting to know Judy while engaging in some fun missions, which initially didn't feel like they would lead to a romance ending. I wanted to romance Panam, really, but she doesn't go for the girlies. Judy also seems cool, so it's a close second. 
+There was getting to know Judy while engaging in some fun missions, which initially didn't feel like they would lead to a romance ending. I wanted to romance Panam, really, but she doesn't go for the girlies. Judy also seems cool, so it's a close second.
 
 It was well handled, interesting and - as this game so often does - offered up difference and variance so its systems. It's one of the few times the game has had a fully conflict-free mission. Which I suppose you'd expect from a romance mission.
 

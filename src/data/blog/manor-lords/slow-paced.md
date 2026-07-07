@@ -23,7 +23,7 @@ I wanted to watch more of Maul and Manor Lords therefore seemed like the thing t
 
 ## Pace
 
-This is both a good thing and a bad thing. I enjoy the fact that you can play Manor Lords and not feel like you are rushing around doing a hundred things at once. No one moves quickly, it's hard to miss anything. 
+This is both a good thing and a bad thing. I enjoy the fact that you can play Manor Lords and not feel like you are rushing around doing a hundred things at once. No one moves quickly, it's hard to miss anything.
 
 But this can be frustrating, too. It's sometimes hard to debug why things are being built slowly or not at all. The answer is normally something to do with an ox, but it can be a pig to work that out.
 

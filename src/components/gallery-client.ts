@@ -9,7 +9,7 @@ const imageImports = {
     query: "?url",
     import: "default",
   }),
-};
+} as Record<string, string>;
 
 const imageFiles = Object.entries(imageImports).map(([path, url]) => ({
   path: path.replace(/\\/g, "/").replace(/^\/+/, ""),
@@ -53,7 +53,7 @@ function injectGalleryStyles() {
 
   const style = document.createElement("style");
   style.id = "gallery-widget-styles";
-    style.textContent = `
+  style.textContent = `
     .gallery-widget { position: relative; margin: 0.9rem 0; }
     .gallery-grid { position: relative; display: grid; grid-template-columns: 70% 30%; gap: 0; align-items: stretch; overflow: hidden; border-radius: 1.25rem; background: transparent; }
     .gallery-main, .gallery-thumbs { position: relative; display: grid; width: 100%; min-height: 0; }
@@ -118,15 +118,27 @@ function mountGallery(element: HTMLElement, images: string[]) {
   const grid = document.createElement("div");
   grid.className = "gallery-grid";
 
-  const arrowLeft = createButton("gallery-arrow gallery-arrow-left", "Previous gallery image");
+  const arrowLeft = createButton(
+    "gallery-arrow gallery-arrow-left",
+    "Previous gallery image"
+  );
   arrowLeft.textContent = "‹";
-  const arrowRight = createButton("gallery-arrow gallery-arrow-right", "Next gallery image");
+  const arrowRight = createButton(
+    "gallery-arrow gallery-arrow-right",
+    "Next gallery image"
+  );
   arrowRight.textContent = "›";
 
   const main = document.createElement("div");
   main.className = "gallery-main";
-  const mainButton = createButton("gallery-main-button", "Open gallery image in fullscreen");
-  const mainImg = createImg(images[currentIndex], `Gallery image ${currentIndex + 1} of ${total}`);
+  const mainButton = createButton(
+    "gallery-main-button",
+    "Open gallery image in fullscreen"
+  );
+  const mainImg = createImg(
+    images[currentIndex],
+    `Gallery image ${currentIndex + 1} of ${total}`
+  );
   mainBtnAppend();
 
   function mainBtnAppend() {
@@ -136,10 +148,19 @@ function mountGallery(element: HTMLElement, images: string[]) {
 
   const thumbs = document.createElement("div");
   thumbs.className = "gallery-thumbs";
-  const thumbTop = createButton("gallery-thumb gallery-thumb-top", `Next gallery image 2 of ${total}`);
-  const thumbBottom = createButton("gallery-thumb gallery-thumb-bottom", `Next gallery image 3 of ${total}`);
+  const thumbTop = createButton(
+    "gallery-thumb gallery-thumb-top",
+    `Next gallery image 2 of ${total}`
+  );
+  const thumbBottom = createButton(
+    "gallery-thumb gallery-thumb-bottom",
+    `Next gallery image 3 of ${total}`
+  );
   const thumbTopImg = createImg(images[1], `Next gallery image 2 of ${total}`);
-  const thumbBottomImg = createImg(images[2], `Next gallery image 3 of ${total}`);
+  const thumbBottomImg = createImg(
+    images[2],
+    `Next gallery image 3 of ${total}`
+  );
   thumbTop.appendChild(thumbTopImg);
   thumbBottom.appendChild(thumbBottomImg);
 
@@ -164,7 +185,10 @@ function mountGallery(element: HTMLElement, images: string[]) {
   modalFrame.className = "gallery-modal-frame";
   const modalClose = createButton("gallery-modal-close", "Close gallery modal");
   modalClose.textContent = "×";
-  const modalImage = createImg(images[currentIndex], `Gallery image ${currentIndex + 1} of ${total}`);
+  const modalImage = createImg(
+    images[currentIndex],
+    `Gallery image ${currentIndex + 1} of ${total}`
+  );
   modalImage.className = "gallery-modal-image";
   modalFrame.appendChild(modalClose);
   modalFrame.appendChild(modalImage);

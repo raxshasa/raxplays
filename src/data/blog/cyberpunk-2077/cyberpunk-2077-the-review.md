@@ -23,7 +23,7 @@ I've now rolled two endings. Here goes.
 
 ## The elephant in the room
 
-It's something I noted previously, but it bears repeating that this is a title that launched in a bad state. And I didn't enjoy it at that point. Many of the positives as I see them now were there at launch: the narrative, the world building, the character design. All excellent. But it was a game that was hard to love. 
+It's something I noted previously, but it bears repeating that this is a title that launched in a bad state. And I didn't enjoy it at that point. Many of the positives as I see them now were there at launch: the narrative, the world building, the character design. All excellent. But it was a game that was hard to love.
 
 It's definitely true that this impacted me in the early stages of my playthrough, but towards the end I'd pretty much forgotten all about it. There are still bugs in there, but they are far more "garden variety" and the sort of thing I would expect in something vaguely open world.
 

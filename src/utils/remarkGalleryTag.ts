@@ -3,8 +3,9 @@ export default function remarkGalleryTag() {
     function visit(node: any) {
       if (node && node.type === "html" && typeof node.value === "string") {
         node.value = node.value
-          .replace(/<\s*Gallery\b([^>]*)\/?>/gi, (_, attrs) =>
-            `<gallery${attrs}></gallery>`
+          .replace(
+            /<\s*Gallery\b([^>]*)\/?>/gi,
+            (_: string, attrs: string) => `<gallery${attrs}></gallery>`
           )
           .replace(/<\s*\/\s*Gallery\s*>/gi, "</gallery>");
       }

@@ -2,7 +2,9 @@
 const { folder } = Astro.props;
 
 function normalizeFolder(value: string | undefined) {
-  const cleaned = String(value || "").trim().replace(/\\\\/g, "/");
+  const cleaned = String(value || "")
+    .trim()
+    .replace(/\\\\/g, "/");
   if (!cleaned) return null;
 
   let normalized = cleaned.replace(/^\/+/, "");
@@ -47,7 +49,7 @@ const imageImports = {
     query: "?url",
     import: "default",
   }),
-};
+} as Record<string, string>;
 
 const images = Object.entries(imageImports)
   .map(([path, url]) => ({
@@ -71,6 +73,7 @@ const mainLabel = `Gallery image 1 of ${totalImages}`;
 const topLabel = `Next gallery image 2 of ${totalImages}`;
 const bottomLabel = `Next gallery image 3 of ${totalImages}`;
 ---
+
 <div class="gallery-widget" data-gallery-id={galleryId}>
   <div class="gallery-grid">
     <button
@@ -87,7 +90,12 @@ const bottomLabel = `Next gallery image 3 of ${totalImages}`;
         class="gallery-main-button"
         aria-label="Open gallery image in fullscreen"
       >
-        <img src={images[initialIndex]} alt={mainLabel} loading="eager" decoding="async" />
+        <img
+          src={images[initialIndex]}
+          alt={mainLabel}
+          loading="eager"
+          decoding="async"
+        />
       </button>
     </div>
 
@@ -125,16 +133,29 @@ const bottomLabel = `Next gallery image 3 of ${totalImages}`;
   <div class="gallery-modal" aria-hidden="true">
     <div class="gallery-modal-backdrop"></div>
     <div class="gallery-modal-frame">
-      <button type="button" class="gallery-modal-close" aria-label="Close gallery modal">
+      <button
+        type="button"
+        class="gallery-modal-close"
+        aria-label="Close gallery modal"
+      >
         ×
       </button>
-      <img src={images[initialIndex]} alt={mainLabel} class="gallery-modal-image" loading="eager" decoding="async" />
+      <img
+        src={images[initialIndex]}
+        alt={mainLabel}
+        class="gallery-modal-image"
+        loading="eager"
+        decoding="async"
+      />
     </div>
   </div>
 
-  <script type="application/json" class="gallery-data">
-    {JSON.stringify(images)}
-  </script>
+  <script
+    is:inline
+    type="application/json"
+    class="gallery-data"
+    set:html={JSON.stringify(images)}
+  />
 
   <script is:inline>
     const root = document.currentScript?.parentElement;
@@ -143,7 +164,9 @@ const bottomLabel = `Next gallery image 3 of ${totalImages}`;
     }
 
     const dataElement = root.querySelector(".gallery-data");
-    const images = dataElement ? JSON.parse(dataElement.textContent || "[]") : [];
+    const images = dataElement
+      ? JSON.parse(dataElement.textContent || "[]")
+      : [];
     if (!images.length) {
       return;
     }
@@ -211,16 +234,14 @@ const bottomLabel = `Next gallery image 3 of ${totalImages}`;
       document.body.style.overflow = "";
     }
 
-    function handleThumbnailClick(offset) {
-      renderState(currentIndex + offset);
-    }
-
     renderState(currentIndex);
 
     arrowLeft?.addEventListener("click", () => renderState(currentIndex - 1));
     arrowRight?.addEventListener("click", () => renderState(currentIndex + 1));
     root.querySelectorAll(".gallery-thumb").forEach((thumb, idx) => {
-      thumb.addEventListener("click", () => renderState(currentIndex + idx + 1));
+      thumb.addEventListener("click", () =>
+        renderState(currentIndex + idx + 1)
+      );
     });
     mainButton?.addEventListener("click", openModal);
     modalClose?.addEventListener("click", closeModal);
@@ -312,7 +333,9 @@ const bottomLabel = `Next gallery image 3 of ${totalImages}`;
     place-items: center;
     cursor: pointer;
     z-index: 1;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
   }
 
   .gallery-arrow:hover {

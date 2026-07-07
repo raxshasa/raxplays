@@ -26,4 +26,4 @@ I just bought this and did not play for long. I was mostly keen to have a go as 
 
 As noted though, first impressions were strong. Much less focus on exploration and mining and far more on combat and micro-progression. It is a roguelike after all. Gunplay and the guns themselves feel noticebly tidier.
 
-I bought Space Marine 2 at the same time and still need to finish the last mission on Cyberpunk, so will likely hop into this one from time to time to check out any changes being made. 
+I bought Space Marine 2 at the same time and still need to finish the last mission on Cyberpunk, so will likely hop into this one from time to time to check out any changes being made.

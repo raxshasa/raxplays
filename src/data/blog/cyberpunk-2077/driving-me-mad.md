@@ -26,6 +26,7 @@ I had to kidnap a couple of folks while I was stowed in the boot of their car. I
 Generally, this is a cool setup and I like the concept. The execution was maddening. I had to reset the mission three or four times.
 
 I was continually driven off roads, which is fine, but here are the places I ended up:
+
 - An area from which I could basically not escape, as I fell into a pedestrian section with lots of barriers in the way. After losing control, I basically couldn't get out
 - A small enough section that ensured I was stuck. For the first time in the game I was prompted to hold F to be placed back on the road. On doing that, my view reverted to my character _in the boot_, which wasn't super helpful
 - The first one again
