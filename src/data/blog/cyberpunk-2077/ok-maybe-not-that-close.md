@@ -21,7 +21,7 @@ There's more game left here than I thought there was, which has turned out to be
 
 ## MOAR
 
-But it's certainly a good thing. The tower setting offered some more fun, unique gameplay. I'm starting to be incredibly impressed at the sheer variation and the amount of scripting that must have happened to glue some of these systems together. There are things in here that feel bespoke enough that the animation systems must have taken an absolute hammering. 
+But it's certainly a good thing. The tower setting offered some more fun, unique gameplay. I'm starting to be incredibly impressed at the sheer variation and the amount of scripting that must have happened to glue some of these systems together. There are things in here that feel bespoke enough that the animation systems must have taken an absolute hammering.
 
 ![I had kind of forgotten how much of a psychopath I look](src/assets/images/cyberpunk/cinematic-drive.jpg)
 _I had kind of forgotten how much of a psychopath I look. This is just a disconnected image I liked._

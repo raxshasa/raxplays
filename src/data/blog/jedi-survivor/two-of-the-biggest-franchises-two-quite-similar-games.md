@@ -39,9 +39,9 @@ While I waited for Jedi Survivor to download, I played a bit more of Space Marin
 
 ## Elegance of a blade
 
-Part of the beauty of Outcast, the first Jedi game, was the slow discovery of your powers and unlocking of abilities. You progressed through various trees, ultimately ending up building your own lightsaber, which was very cool. 
+Part of the beauty of Outcast, the first Jedi game, was the slow discovery of your powers and unlocking of abilities. You progressed through various trees, ultimately ending up building your own lightsaber, which was very cool.
 
-And the second games seems to... completely ignore that. It doesn't seem to matter than I ended that game as a bit of a badass, I still just seem to have a skill tree to unlock. Unless I somehow missed it, there doesn't seem to be a narrative hook for that. I suppose that's fine, it's nice and simple, but I was expecting a Mass Effect 2 style "you've been rebuilt" plot thing to explain the requirement. 
+And the second games seems to... completely ignore that. It doesn't seem to matter than I ended that game as a bit of a badass, I still just seem to have a skill tree to unlock. Unless I somehow missed it, there doesn't seem to be a narrative hook for that. I suppose that's fine, it's nice and simple, but I was expecting a Mass Effect 2 style "you've been rebuilt" plot thing to explain the requirement.
 
 Otherwise, it seems a lot like a tasty sucessor. The cutscenes maintain the same high production values as in the first title and the combat remains slick and satisfying, when I'm not being rubbish at it. It has been a while since I played the first title, but there feels like there's more platforming this time, and it's well executed. I feel like I'm a Jedi doing things only a Jedi could do and - really - that's the whole point.
 

@@ -21,7 +21,7 @@ It has been a solid 25 years or so since I played this game last time and OH BOY
 
 ## Control scheming
 
-Part of it, I think, is the controls. The handling of the ships is _pretty_ sensitive and it's hard to stay on target (lol) when tracking enemies. 
+Part of it, I think, is the controls. The handling of the ships is _pretty_ sensitive and it's hard to stay on target (lol) when tracking enemies.
 
 This is especially true of faster moving enemies. Those things are hard to get a hold of.
 
@@ -33,7 +33,7 @@ It all adds up to me failing to break into the silver or gold tiers of the scori
 
 With that, however, comes a lovingly made game that delivers a lot of fun. The ship models themselves are well made and the overall soundscape is excellent. From the little whistles and beeps when navigating the 3D menu through to the dialogue throughout missions, a lot of the space on the cartridge must be taken up by audio assets.
 
-It results in a package that feels well made and true to the source material, even given the limitations of the console when it comes to terrain and draw distance. 
+It results in a package that feels well made and true to the source material, even given the limitations of the console when it comes to terrain and draw distance.
 
 ## Next up
 
