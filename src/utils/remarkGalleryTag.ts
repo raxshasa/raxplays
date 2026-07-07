@@ -1,6 +1,12 @@
+interface MarkdownNode {
+  type?: string;
+  value?: string;
+  children?: MarkdownNode[];
+}
+
 export default function remarkGalleryTag() {
-  return (tree: any) => {
-    function visit(node: any) {
+  return (tree: MarkdownNode) => {
+    function visit(node: MarkdownNode) {
       if (node && node.type === "html" && typeof node.value === "string") {
         node.value = node.value
           .replace(
