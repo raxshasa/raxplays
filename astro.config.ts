@@ -3,6 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
+import remarkGalleryTag from "./src/utils/remarkGalleryTag";
 import partytown from "@astrojs/partytown";
 import {
   transformerNotationDiff,
@@ -32,7 +33,11 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
+    remarkPlugins: [
+      remarkGalleryTag,
+      remarkToc,
+      [remarkCollapse, { test: "Table of contents" }],
+    ],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
       themes: { light: "min-light", dark: "night-owl" },

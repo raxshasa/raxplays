@@ -1,0 +1,437 @@
+---
+const { folder } = Astro.props;
+
+function normalizeFolder(value: string | undefined) {
+  const cleaned = String(value || "")
+    .trim()
+    .replace(/\\\\/g, "/");
+  if (!cleaned) return null;
+
+  let normalized = cleaned.replace(/^\/+/, "");
+
+  if (normalized.startsWith("src/assets/images/")) {
+    return normalized;
+  }
+
+  if (normalized.startsWith("assets/images/")) {
+    return `src/${normalized}`;
+  }
+
+  if (normalized.startsWith("assets/")) {
+    return `src/${normalized}`;
+  }
+
+  if (normalized.startsWith("src/data/blog/")) {
+    return normalized;
+  }
+
+  if (normalized.startsWith("data/blog/")) {
+    return `src/${normalized}`;
+  }
+
+  if (normalized.startsWith("blog/")) {
+    return `src/data/${normalized}`;
+  }
+
+  return `src/assets/images/${normalized}`;
+}
+
+const targetFolder = normalizeFolder(folder);
+
+const imageImports = {
+  ...import.meta.glob("/src/assets/images/**/*.{png,jpg,jpeg,webp,avif}", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }),
+  ...import.meta.glob("/src/data/blog/**/*.{png,jpg,jpeg,webp,avif}", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }),
+} as Record<string, string>;
+
+const images = Object.entries(imageImports)
+  .map(([path, url]) => ({
+    path: path.replace(/\\\\/g, "/"),
+    url,
+  }))
+  .filter(({ path }) => targetFolder && path.includes(targetFolder))
+  .sort((a, b) => a.path.localeCompare(b.path))
+  .map(image => image.url);
+
+if (images.length < 3 || !targetFolder) {
+  return null;
+}
+
+const galleryId = `gallery-${Math.random().toString(36).slice(2, 10)}`;
+const totalImages = images.length;
+const initialIndex = 0;
+const next1 = images[1];
+const next2 = images[2];
+const mainLabel = `Gallery image 1 of ${totalImages}`;
+const topLabel = `Next gallery image 2 of ${totalImages}`;
+const bottomLabel = `Next gallery image 3 of ${totalImages}`;
+---
+
+<div class="gallery-widget" data-gallery-id={galleryId}>
+  <div class="gallery-grid">
+    <button
+      type="button"
+      class="gallery-arrow gallery-arrow-left"
+      aria-label="Previous gallery image"
+    >
+      ‹
+    </button>
+
+    <div class="gallery-main">
+      <button
+        type="button"
+        class="gallery-main-button"
+        aria-label="Open gallery image in fullscreen"
+      >
+        <img
+          src={images[initialIndex]}
+          alt={mainLabel}
+          loading="eager"
+          decoding="async"
+        />
+      </button>
+    </div>
+
+    <button
+      type="button"
+      class="gallery-arrow gallery-arrow-right"
+      aria-label="Next gallery image"
+    >
+      ›
+    </button>
+
+    <div class="gallery-thumbs">
+      <button
+        type="button"
+        class="gallery-thumb gallery-thumb-top"
+        aria-label={topLabel}
+      >
+        <img src={next1} alt={topLabel} loading="lazy" decoding="async" />
+      </button>
+
+      <button
+        type="button"
+        class="gallery-thumb gallery-thumb-bottom"
+        aria-label={bottomLabel}
+      >
+        <img src={next2} alt={bottomLabel} loading="lazy" decoding="async" />
+      </button>
+    </div>
+  </div>
+
+  <div class="gallery-footer">
+    <span class="gallery-counter">1 / {totalImages}</span>
+  </div>
+
+  <div class="gallery-modal" aria-hidden="true">
+    <div class="gallery-modal-backdrop"></div>
+    <div class="gallery-modal-frame">
+      <button
+        type="button"
+        class="gallery-modal-close"
+        aria-label="Close gallery modal"
+      >
+        ×
+      </button>
+      <img
+        src={images[initialIndex]}
+        alt={mainLabel}
+        class="gallery-modal-image"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+  </div>
+
+  <script
+    is:inline
+    type="application/json"
+    class="gallery-data"
+    set:html={JSON.stringify(images)}
+  />
+
+  <script is:inline>
+    const root = document.currentScript?.parentElement;
+    if (!root) {
+      throw new Error("Gallery root node not found.");
+    }
+
+    const dataElement = root.querySelector(".gallery-data");
+    const images = dataElement
+      ? JSON.parse(dataElement.textContent || "[]")
+      : [];
+    if (!images.length) {
+      return;
+    }
+
+    const total = images.length;
+    let currentIndex = 0;
+
+    const mainButton = root.querySelector(".gallery-main-button");
+    const mainImg = root.querySelector(".gallery-main img");
+    const thumbTop = root.querySelector(".gallery-thumb-top img");
+    const thumbBottom = root.querySelector(".gallery-thumb-bottom img");
+    const counter = root.querySelector(".gallery-counter");
+    const arrowLeft = root.querySelector(".gallery-arrow-left");
+    const arrowRight = root.querySelector(".gallery-arrow-right");
+    const modal = root.querySelector(".gallery-modal");
+    const modalImage = root.querySelector(".gallery-modal-image");
+    const modalClose = root.querySelector(".gallery-modal-close");
+
+    function clampIndex(index) {
+      const wrapped = ((index % total) + total) % total;
+      return wrapped;
+    }
+
+    function imageLabel(position) {
+      return `Gallery image ${position} of ${total}`;
+    }
+
+    function renderState(index) {
+      currentIndex = clampIndex(index);
+      const next = clampIndex(currentIndex + 1);
+      const nextAfter = clampIndex(currentIndex + 2);
+
+      if (mainImg) {
+        mainImg.src = images[currentIndex];
+        mainImg.alt = imageLabel(currentIndex + 1);
+      }
+      if (thumbTop) {
+        thumbTop.src = images[next];
+        thumbTop.alt = imageLabel(next + 1);
+      }
+      if (thumbBottom) {
+        thumbBottom.src = images[nextAfter];
+        thumbBottom.alt = imageLabel(nextAfter + 1);
+      }
+      if (counter) {
+        counter.textContent = `${currentIndex + 1} / ${total}`;
+      }
+      if (modalImage) {
+        modalImage.src = images[currentIndex];
+        modalImage.alt = imageLabel(currentIndex + 1);
+      }
+    }
+
+    function openModal() {
+      if (!modal) return;
+      modal.removeAttribute("aria-hidden");
+      modal.classList.add("gallery-modal-open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      if (!modal) return;
+      modal.setAttribute("aria-hidden", "true");
+      modal.classList.remove("gallery-modal-open");
+      document.body.style.overflow = "";
+    }
+
+    renderState(currentIndex);
+
+    arrowLeft?.addEventListener("click", () => renderState(currentIndex - 1));
+    arrowRight?.addEventListener("click", () => renderState(currentIndex + 1));
+    root.querySelectorAll(".gallery-thumb").forEach((thumb, idx) => {
+      thumb.addEventListener("click", () =>
+        renderState(currentIndex + idx + 1)
+      );
+    });
+    mainButton?.addEventListener("click", openModal);
+    modalClose?.addEventListener("click", closeModal);
+    modal?.addEventListener("click", event => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    });
+  </script>
+</div>
+
+<style>
+  .gallery-widget {
+    margin: 2rem 0;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .gallery-main,
+  .gallery-thumbs {
+    position: relative;
+    display: grid;
+    width: 100%;
+  }
+
+  .gallery-main {
+    overflow: hidden;
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  }
+
+  .gallery-main-button,
+  .gallery-thumb {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+    color: inherit;
+    text-align: inherit;
+  }
+
+  .gallery-main img,
+  .gallery-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-thumbs {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .gallery-thumb {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  }
+
+  .gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
+    border: 0;
+    background: rgba(255, 255, 255, 0.72);
+    color: #111;
+    font-size: 1.25rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 1;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  .gallery-arrow:hover {
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .gallery-arrow-left {
+    left: 1rem;
+  }
+
+  .gallery-arrow-right {
+    right: 1rem;
+  }
+
+  .gallery-footer {
+    margin-top: 0.75rem;
+    text-align: right;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.68);
+  }
+
+  .gallery-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 9999;
+  }
+
+  .gallery-modal-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .gallery-modal-backdrop {
+    position: absolute;
+    inset: 0;
+  }
+
+  .gallery-modal-frame {
+    position: relative;
+    max-width: min(92vw, 1200px);
+    max-height: min(92vh, 900px);
+    width: 100%;
+    z-index: 1;
+  }
+
+  .gallery-modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    border-radius: 1.25rem;
+    box-shadow: 0 40px 120px rgba(0, 0, 0, 0.25);
+  }
+
+  .gallery-modal-close {
+    position: absolute;
+    right: -0.75rem;
+    top: -0.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.94);
+    color: #111;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .gallery-thumbs {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .gallery-grid {
+      gap: 0.75rem;
+    }
+
+    .gallery-thumbs {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
