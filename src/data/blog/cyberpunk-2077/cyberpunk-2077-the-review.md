@@ -1,10 +1,10 @@
 ---
 author: Olly Percival
 pubDatetime: 2026-08-15T21:03:13.446Z
-title: "Cuberpunk 2077: The Review"
+title: "Cyberpunk 2077: The Review"
 postSlug: cyberpunk-2077-the-review
 featured: true
-draft: true
+draft: false
 tags:
   - solo
   - rpg
@@ -74,4 +74,12 @@ _This area of Dogtown I very much like_
 
 Additionally, there are content drops that fall into the area and then some folks fight over them and I don't really know why? Perhaps it was explained to me? I don't know. If it was I missed it and this particular feature felt a little random and not very interesting to me. It's easily ignored, but a little jarring.
 
+Overall, however, Phantom Liberty elevates the Cyperpunk experience significantly, taking it from a high-end "good" game into the realms of "great".
+
 ## Summary
+
+Cyberpunk is not without its flaws, but many of those are born out of ambition and therefore feel easier to overlook. If you don't try and play this as a futuristic GTA, which was never the intent of the game, I suspect most people will have a most excellent time. It's one of the strongest RPGs I've ever played and would probably get a look in in my top 20 of all time. 
+
+I didn't feel it at the time, but after finishing the game there's something vaguely Mass Effect-esque about it for me. It left me with a feeling that I haven't had much since that game: perhaps it's the narrative-laden, choice-driven nature where things feel like they actually _matter_. That's hugely important when creating something as rich and dense as _Cyberpunk: 2077_. And despite the rockiness of the launch, this title is a technical marvel. The performance I got on my modest rig with some light raytracing on and decent textures was admirable. 
+
+All told, I can see myself playing through this again, which for a title of this size is no small testament to its world.
