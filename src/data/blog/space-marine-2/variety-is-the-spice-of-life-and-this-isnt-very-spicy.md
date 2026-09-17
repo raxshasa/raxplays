@@ -4,7 +4,7 @@ pubDatetime: 2026-09-10T20:52:44.967Z
 title: "Variety is the spice of life and this isn't very spicy"
 postSlug: variety-is-the-spice-of-life-and-this-isnt-very-spicy
 featured: false
-draft: true
+draft: false
 tags:
   - solo
   - PC
