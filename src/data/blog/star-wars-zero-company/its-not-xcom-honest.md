@@ -14,11 +14,11 @@ tags:
 games:
   - "Star Wars: Zero Company"
 currentScore: 7.0 
-description: "I loved XCOM and it is to my great shame that I was never very good at it. Time to try a Stars Wars flavoured one."
+description: "I loved XCOM and it is to my great shame that I was never very good at it. Time to try a StarsWars flavoured one."
 nowplaying: "I've progressed through some of the early game and am now in the process of dealing with some of the tougher enemies."
 ---
 
-I loved XCOM and it is to my great shame that I was never very good at it. Time to try a Stars Wars flavoured one.
+I loved XCOM and it is to my great shame that I was never very good at it. Time to try a Star Wars flavoured one.
 
 ## But first, the bad
 
